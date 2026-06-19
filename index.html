@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bryton Roofs — Eastern NC's Only Perfect-Record Roofer</title>
+<meta name="description" content="20 years. GAF-certified. NC License #87794. A flawless 5.0 rating and the only instant roof quote in Eastern North Carolina — get your number in 60 seconds." />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- grain + custom cursor -->
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+<!-- loader -->
+<div class="loader" id="loader">
+  <div class="loader__mark">BRYTON<span>ROOFS</span></div>
+  <div class="loader__bar"><span></span></div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top">BRYTON<span>ROOFS</span></a>
+  <nav class="nav__links">
+    <a href="#quote">Instant Quote</a>
+    <a href="#services">Services</a>
+    <a href="#work">Our Work</a>
+    <a href="#reviews">Reviews</a>
+  </nav>
+  <a href="#book" class="btn btn--ghost magnetic" data-cursor="hover">Book inspection</a>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__bg" data-parallax="0.25"></div>
+  <div class="hero__roofline" data-parallax="0.5" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="hero__eyebrow reveal-up">Greenville · Ayden · Raleigh · Durham · Goldsboro</p>
+    <h1 class="hero__title">
+      <span class="line">Eastern NC's only roofer</span>
+      <span class="line">with a <em>perfect</em> record.</span>
+    </h1>
+    <p class="hero__sub reveal-up">20 years. NC License #87794. GAF-certified. A 5.0 rating with zero complaints — and a quote you can start right now, not next week.</p>
+    <div class="hero__cta reveal-up">
+      <a href="#quote" class="btn btn--solid magnetic" data-cursor="hover">Get my instant quote</a>
+      <a href="#work" class="btn btn--line magnetic" data-cursor="hover">See the work</a>
+    </div>
+  </div>
+
+  <!-- trust ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>5.0 ★ Rating</span><span>•</span><span>Zero Complaints</span><span>•</span><span>GAF Certified</span><span>•</span><span>NC License #87794</span><span>•</span><span>10-Year Craftsmanship Warranty</span><span>•</span><span>20 Years in Eastern NC</span><span>•</span>
+      <span>5.0 ★ Rating</span><span>•</span><span>Zero Complaints</span><span>•</span><span>GAF Certified</span><span>•</span><span>NC License #87794</span><span>•</span><span>10-Year Craftsmanship Warranty</span><span>•</span><span>20 Years in Eastern NC</span><span>•</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI INSTANT QUOTE ============ -->
+<section class="quote section" id="quote">
+  <div class="section__head">
+    <span class="kicker">AI Instant Estimator</span>
+    <h2 class="reveal-line">Your ballpark roof price — in 60 seconds, no callback required.</h2>
+    <p class="lead reveal-up">Answer five quick questions. Our estimator runs the same math GAF-certified crews use, then locks your number while we confirm the details.</p>
+  </div>
+
+  <div class="estimator" id="estimator">
+    <div class="estimator__progress"><span id="estProgress"></span></div>
+
+    <!-- STEP 1 -->
+    <div class="step is-active" data-step="1">
+      <p class="step__q">What do you need?</p>
+      <div class="opts">
+        <button class="opt" data-key="project" data-val="Full replacement" data-cursor="hover">Roof replacement</button>
+        <button class="opt" data-key="project" data-val="Repair" data-cursor="hover">Roof repair</button>
+        <button class="opt" data-key="project" data-val="Storm damage" data-cursor="hover">Storm damage</button>
+        <button class="opt" data-key="project" data-val="New build" data-cursor="hover">New build</button>
+        <button class="opt" data-key="project" data-val="Inspection" data-cursor="hover">Free inspection</button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" data-step="2">
+      <p class="step__q">What roof material?</p>
+      <div class="opts">
+        <button class="opt" data-key="material" data-val="Architectural shingle" data-mult="1" data-cursor="hover">Architectural shingle</button>
+        <button class="opt" data-key="material" data-val="Standing seam metal" data-mult="1.9" data-cursor="hover">Metal — standing seam</button>
+        <button class="opt" data-key="material" data-val="Corrugated metal" data-mult="1.5" data-cursor="hover">Metal — corrugated</button>
+        <button class="opt" data-key="material" data-val="Flat / commercial (TPO·EPDM·liquid)" data-mult="1.4" data-cursor="hover">Flat / commercial</button>
+        <button class="opt" data-key="material" data-val="Not sure" data-mult="1.1" data-cursor="hover">Not sure yet</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step" data-step="3">
+      <p class="step__q">How big is the home?</p>
+      <div class="opts">
+        <button class="opt" data-key="size" data-val="Under 1,500 sq ft" data-base="9000" data-cursor="hover">Under 1,500 sq ft</button>
+        <button class="opt" data-key="size" data-val="1,500–2,500 sq ft" data-base="14000" data-cursor="hover">1,500–2,500 sq ft</button>
+        <button class="opt" data-key="size" data-val="2,500–4,000 sq ft" data-base="21000" data-cursor="hover">2,500–4,000 sq ft</button>
+        <button class="opt" data-key="size" data-val="4,000+ sq ft" data-base="30000" data-cursor="hover">4,000+ sq ft</button>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step" data-step="4">
+      <p class="step__q">Roof complexity?</p>
+      <div class="opts">
+        <button class="opt" data-key="story" data-val="Single story, simple" data-cmult="1" data-cursor="hover">Single story, simple</button>
+        <button class="opt" data-key="story" data-val="Two story" data-cmult="1.15" data-cursor="hover">Two story</button>
+        <button class="opt" data-key="story" data-val="Steep & complex" data-cmult="1.3" data-cursor="hover">Steep &amp; complex</button>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="step" data-step="5">
+      <p class="step__q">How soon do you need it?</p>
+      <div class="opts">
+        <button class="opt" data-key="timeline" data-val="Emergency — leaking now" data-cursor="hover">Emergency — leaking now</button>
+        <button class="opt" data-key="timeline" data-val="Within 30 days" data-cursor="hover">Within 30 days</button>
+        <button class="opt" data-key="timeline" data-val="Just planning" data-cursor="hover">Just planning ahead</button>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="step step--result" data-step="6">
+      <div class="calc" id="calc"><span class="calc__ring"></span><p>Calculating your estimate…</p></div>
+      <div class="result" id="result" hidden>
+        <p class="result__label">Your estimated range</p>
+        <div class="result__range"><span id="estLow">$0</span><span class="dash">–</span><span id="estHigh">$0</span></div>
+        <p class="result__fin">or about <strong id="estMonthly">$0/mo</strong> with flexible financing</p>
+        <div class="result__storm" id="stormNote" hidden>
+          <strong>Storm or wind damage?</strong> We handle the insurance claim with you — most homeowners pay only their deductible. We'll document everything for your adjuster.
+        </div>
+        <form class="result__form" id="lockForm">
+          <p>Lock this quote &amp; book your free inspection:</p>
+          <div class="result__fields">
+            <input type="text" name="name" placeholder="Your name" required data-cursor="text" />
+            <input type="tel" name="phone" placeholder="Mobile number" required data-cursor="text" />
+          </div>
+          <button type="submit" class="btn btn--solid magnetic" data-cursor="hover">Lock my quote</button>
+        </form>
+        <p class="result__disclaimer">Ballpark only — your exact price comes after a free on-site inspection by a GAF-certified Bryton crew.</p>
+      </div>
+    </div>
+
+    <button class="estimator__back" id="estBack" hidden data-cursor="hover">← Back</button>
+  </div>
+</section>
+
+<!-- ============ STORM / 24-7 ============ -->
+<section class="storm section" id="storm">
+  <div class="storm__inner">
+    <div class="storm__live"><span class="dot"></span> Live now · answering 24/7</div>
+    <h2 class="reveal-line">Storm hit? We're already on it.</h2>
+    <p class="lead reveal-up">An active leak or wind damage can't wait for business hours. Tap to call or text and we'll triage before more water gets in — then document everything for your insurance claim.</p>
+    <div class="storm__cta reveal-up">
+      <!-- TODO: replace with verified GBP phone number (could not verify; site origin blocked) -->
+      <a href="tel:+10000000000" class="btn btn--solid magnetic" data-cursor="hover">Call now</a>
+      <a href="sms:+10000000000" class="btn btn--line magnetic" data-cursor="hover">Text a photo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services section" id="services">
+  <div class="section__head">
+    <span class="kicker">What we do</span>
+    <h2 class="reveal-line">One crew. Every roof in Eastern NC.</h2>
+    <p class="lead reveal-up">Residential and commercial, repair to full replacement, shingle to standing seam — installed by a GAF-certified team that's done it for two decades.</p>
+  </div>
+  <div class="grid">
+    <article class="card reveal-up" data-cursor="hover"><span class="card__no">01</span><h3>Residential Roofing</h3><p>Architectural &amp; 3-tab shingle homes built to last through NC weather.</p></article>
+    <article class="card reveal-up" data-cursor="hover"><span class="card__no">02</span><h3>Commercial</h3><p>TPO, EPDM &amp; fluid-applied membranes for flat and low-slope buildings.</p></article>
+    <article class="card reveal-up" data-cursor="hover"><span class="card__no">03</span><h3>Repair &amp; Maintenance</h3><p>Leaks, missing shingles, flashing — fixed fast before they spread.</p></article>
+    <article class="card reveal-up" data-cursor="hover"><span class="card__no">04</span><h3>Full Replacement</h3><p>Complete tear-off and rebuild with a 10-year craftsmanship warranty.</p></article>
+    <article class="card reveal-up" data-cursor="hover"><span class="card__no">05</span><h3>Metal Roofing</h3><p>Standing seam &amp; corrugated — decades of life, modern looks.</p></article>
+    <article class="card reveal-up" data-cursor="hover"><span class="card__no">06</span><h3>Gutters</h3><p>Seamless gutters and guards that move water away from your home.</p></article>
+    <article class="card reveal-up" data-cursor="hover"><span class="card__no">07</span><h3>Inspections</h3><p>Free, no-pressure roof health checks — documented with photos.</p></article>
+    <article class="card reveal-up" data-cursor="hover"><span class="card__no">08</span><h3>Emergency &amp; Insurance Claims</h3><p>24/7 storm response and full claim support, start to finish.</p></article>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER ============ -->
+<section class="work section" id="work">
+  <div class="section__head">
+    <span class="kicker">Proof, not promises</span>
+    <h2 class="reveal-line">Drag to see the difference.</h2>
+    <p class="lead reveal-up">Real Eastern NC roofs, before and after Bryton's crew. <em>Images shown are placeholders — your live site pulls the 24+ project photos from Facebook &amp; Yelp.</em></p>
+  </div>
+  <div class="ba-row">
+    <figure class="ba reveal-up" data-cursor="drag">
+      <div class="ba__after" data-label="Standing seam · Greenville"></div>
+      <div class="ba__before" data-label="Before"></div>
+      <input type="range" min="0" max="100" value="50" class="ba__range" aria-label="Reveal before and after" />
+      <span class="ba__handle" aria-hidden="true"></span>
+    </figure>
+    <figure class="ba reveal-up" data-cursor="drag">
+      <div class="ba__after ba__after--2" data-label="Storm replacement · Ayden"></div>
+      <div class="ba__before ba__before--2" data-label="Storm damage"></div>
+      <input type="range" min="0" max="100" value="50" class="ba__range" aria-label="Reveal before and after" />
+      <span class="ba__handle" aria-hidden="true"></span>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ FINANCING ============ -->
+<section class="finance section" id="finance">
+  <div class="finance__grid">
+    <div class="finance__copy">
+      <span class="kicker">Financing</span>
+      <h2 class="reveal-line">A new roof for the price of a coffee a day?</h2>
+      <p class="lead reveal-up">Flexible financing turns a major replacement into a low monthly payment. Slide your project size to see your number.</p>
+      <div class="slider reveal-up">
+        <label>Project size: <strong id="finProject">$14,000</strong></label>
+        <input type="range" min="6000" max="35000" step="500" value="14000" id="finRange" data-cursor="drag" />
+        <div class="slider__out">≈ <strong id="finMonthly">$195/mo</strong> <span>· 84 mo · est. 9.99% APR</span></div>
+      </div>
+    </div>
+    <aside class="promo reveal-up" data-cursor="hover">
+      <span class="promo__tag">Limited time</span>
+      <h3>$750 off a full roof replacement</h3>
+      <p>Booked this season. Stacks with insurance-claim work. Mention code <strong>BRYTON750</strong> on your inspection.</p>
+      <a href="#book" class="btn btn--solid magnetic" data-cursor="hover">Claim this offer</a>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews section" id="reviews">
+  <div class="section__head">
+    <span class="kicker">Aggregated · Google + Yelp + Facebook</span>
+    <h2 class="reveal-line">5.0 stars. Zero complaints. Twenty years.</h2>
+    <div class="reviews__stats">
+      <div><span class="num" data-count="5.0" data-dec="1">0.0</span><small>★ average</small></div>
+      <div><span class="num" data-count="38">0</span><small>reviews</small></div>
+      <div><span class="num" data-count="0">0</span><small>complaints</small></div>
+      <div><span class="num" data-count="20">0</span><small>years</small></div>
+    </div>
+  </div>
+  <div class="marquee" data-cursor="drag">
+    <div class="marquee__track">
+      <blockquote class="rev"><p>"Will responded promptly and explained the problem before making any repairs. Efficient, professional — highly recommend."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
+      <blockquote class="rev"><p>"Excellent experience on our barrel-tile roof. Taylor Burns was helpful and professional the whole way through."</p><footer>Yelp review <span>★★★★★</span></footer></blockquote>
+      <blockquote class="rev"><p>"Quality work and high standards. They're on speed dial for every project from here out."</p><footer>Facebook review <span>★★★★★</span></footer></blockquote>
+      <blockquote class="rev"><p>"Fully licensed, fully insured, and they treated my home like their own. Couldn't ask for more."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
+      <!-- duplicate for seamless loop -->
+      <blockquote class="rev"><p>"Will responded promptly and explained the problem before making any repairs. Efficient, professional — highly recommend."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
+      <blockquote class="rev"><p>"Excellent experience on our barrel-tile roof. Taylor Burns was helpful and professional the whole way through."</p><footer>Yelp review <span>★★★★★</span></footer></blockquote>
+      <blockquote class="rev"><p>"Quality work and high standards. They're on speed dial for every project from here out."</p><footer>Facebook review <span>★★★★★</span></footer></blockquote>
+      <blockquote class="rev"><p>"Fully licensed, fully insured, and they treated my home like their own. Couldn't ask for more."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
+    </div>
+  </div>
+  <p class="reviews__note">Review themes sourced from public Google, Yelp &amp; Facebook listings. Live site auto-syncs new reviews via API.</p>
+</section>
+
+<!-- ============ SERVICE AREA MAP ============ -->
+<section class="area section" id="area">
+  <div class="section__head">
+    <span class="kicker">Service area</span>
+    <h2 class="reveal-line">From Ayden to Raleigh — your county's covered.</h2>
+    <p class="lead reveal-up">Greenville, Ayden, Durham, Raleigh, Goldsboro and across Central &amp; Eastern North Carolina.</p>
+  </div>
+  <div class="map reveal-up">
+    <div class="map__field">
+      <span class="pin" style="--x:62%;--y:46%"><i></i>Greenville</span>
+      <span class="pin" style="--x:58%;--y:54%"><i></i>Ayden</span>
+      <span class="pin" style="--x:30%;--y:33%"><i></i>Durham</span>
+      <span class="pin" style="--x:36%;--y:40%"><i></i>Raleigh</span>
+      <span class="pin" style="--x:48%;--y:52%"><i></i>Goldsboro</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<section class="trust section">
+  <div class="trust__inner">
+    <h2 class="reveal-line trust__title">Backed in writing.</h2>
+    <ul class="trust__row">
+      <li class="reveal-up"><strong>NC License</strong><span>#87794</span></li>
+      <li class="reveal-up"><strong>GAF</strong><span>Certified Contractor</span></li>
+      <li class="reveal-up"><strong>10-Year</strong><span>Craftsmanship Warranty</span></li>
+      <li class="reveal-up"><strong>Fully</strong><span>Insured</span></li>
+      <li class="reveal-up"><strong>Insurance</strong><span>Claim Specialists</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section class="book section" id="book">
+  <div class="book__grid">
+    <div class="book__copy">
+      <span class="kicker">Book it</span>
+      <h2 class="reveal-line">Pick a time. We'll bring the ladder.</h2>
+      <p class="lead reveal-up">Choose a slot for your free inspection — confirmed by text, no phone tag.</p>
+    </div>
+    <form class="booking reveal-up" id="booking">
+      <div class="booking__dates" id="bookDates"></div>
+      <div class="booking__times" id="bookTimes">
+        <button type="button" class="time" data-cursor="hover">8:00 AM</button>
+        <button type="button" class="time" data-cursor="hover">10:30 AM</button>
+        <button type="button" class="time" data-cursor="hover">1:00 PM</button>
+        <button type="button" class="time" data-cursor="hover">3:30 PM</button>
+      </div>
+      <div class="booking__fields">
+        <input type="text" name="name" placeholder="Name" required data-cursor="text" />
+        <input type="tel" name="phone" placeholder="Mobile" required data-cursor="text" />
+        <input type="text" name="address" placeholder="Property address" data-cursor="text" />
+      </div>
+      <button type="submit" class="btn btn--solid magnetic" data-cursor="hover">Confirm my inspection</button>
+      <p class="booking__msg" id="bookMsg" hidden></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="foot__brand">BRYTON<span>ROOFS</span></div>
+  <p>Ayden, NC · Serving Central &amp; Eastern North Carolina · NC License #87794 · GAF Certified</p>
+  <p class="foot__small">Concept build by gearwithai.com — motion landing page demo. Phone, address &amp; hours to be confirmed with the client.</p>
+</footer>
+
+<!-- ============ STICKY CONTACT BAR ============ -->
+<div class="sticky" id="sticky">
+  <a href="tel:+10000000000" class="sticky__btn" data-cursor="hover"><b>Call</b></a>
+  <a href="sms:+10000000000" class="sticky__btn" data-cursor="hover"><b>Text</b></a>
+  <a href="#quote" class="sticky__btn sticky__btn--accent magnetic" data-cursor="hover"><b>Instant Quote</b></a>
+</div>
+
+<!-- libs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
