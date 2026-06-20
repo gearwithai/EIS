@@ -2,3 +2,5 @@ node_modules/
 package.json
 package-lock.json
 shot.js
+shot2.js
+verify.js
