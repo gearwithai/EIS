@@ -5,18 +5,23 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouch = window.matchMedia('(hover: none)').matches;
 
-  /* ---------- LOADER ---------- */
+  /* ---------- LOADER (always dismisses; never blocks content) ---------- */
   const loader = document.getElementById('loader');
   const bar = loader.querySelector('.loader__bar span');
   if (!reduceMotion && window.gsap) {
     gsap.to(bar, { width: '100%', duration: 1.0, ease: 'power2.inOut' });
   }
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      loader.classList.add('is-done');
-      startHero();
-    }, reduceMotion ? 0 : 700);
-  });
+  let heroStarted = false;
+  function dismissLoader() {
+    if (heroStarted) return;
+    heroStarted = true;
+    loader.classList.add('is-done');
+    startHero();
+  }
+  // primary: shortly after load; fallbacks: DOM ready + a hard 2.2s failsafe
+  if (document.readyState === 'complete') setTimeout(dismissLoader, reduceMotion ? 0 : 400);
+  else window.addEventListener('load', () => setTimeout(dismissLoader, reduceMotion ? 0 : 500));
+  setTimeout(dismissLoader, 2200);
 
   /* ---------- LENIS SMOOTH SCROLL ---------- */
   let lenis;

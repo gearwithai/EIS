@@ -46,7 +46,8 @@ section{position:relative}
 @media (hover:none){.cursor{display:none}}
 
 /* ---------- loader ---------- */
-.loader{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+.loader{display:none}
+.js .loader{position:fixed;inset:0;z-index:9999;background:var(--bg);flex-direction:column;align-items:center;justify-content:center;gap:24px;display:flex}
 .loader__mark{font-family:'Fraunces',serif;font-size:clamp(28px,5vw,52px);letter-spacing:.04em}
 .loader__mark span{color:var(--ember)}
 .loader__bar{width:min(240px,60vw);height:2px;background:var(--line);overflow:hidden}
@@ -272,8 +273,8 @@ section{position:relative}
 .sticky__btn--accent{background:var(--ember);color:#150d07}
 .sticky__btn--accent:hover{background:var(--ember-2)}
 
-/* ---------- reveal states ---------- */
-.reveal-up{opacity:0;transform:translateY(28px)}
+/* ---------- reveal states (only hide when JS is running) ---------- */
+.js .reveal-up{opacity:0;transform:translateY(28px)}
 .is-in .reveal-up,.reveal-up.is-in{opacity:1;transform:none;transition:opacity .9s var(--ease),transform .9s var(--ease)}
 
 @media (prefers-reduced-motion:reduce){
