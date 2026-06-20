@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Bryton Roofs — Eastern NC's Only Perfect-Record Roofer</title>
-<meta name="description" content="20 years. GAF-certified. NC License #87794. A flawless 5.0 rating and the only instant roof quote in Eastern North Carolina — get your number in 60 seconds." />
+<meta name="description" content="20 years. GAF-certified. NC License #87794. A flawless 5.0 rating and a founder who walks every roof himself — Eastern North Carolina roofing you can trust." />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +30,7 @@
 <header class="nav" id="nav">
   <a class="nav__brand" href="#top">BRYTON<span>ROOFS</span></a>
   <nav class="nav__links">
-    <a href="#quote">Instant Quote</a>
+    <a href="#founder">The Founder</a>
     <a href="#services">Services</a>
     <a href="#work">Our Work</a>
     <a href="#reviews">Reviews</a>
@@ -40,18 +40,22 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg" aria-hidden="true">
+    <source src="assets/hero.mp4" type="video/mp4" />
+  </video>
   <div class="hero__bg" data-parallax="0.25"></div>
   <div class="hero__roofline" data-parallax="0.5" aria-hidden="true"></div>
+  <div class="hero__grade" aria-hidden="true"></div>
   <div class="hero__inner">
     <p class="hero__eyebrow reveal-up">Greenville · Ayden · Raleigh · Durham · Goldsboro</p>
     <h1 class="hero__title">
       <span class="line">Eastern NC's only roofer</span>
       <span class="line">with a <em>perfect</em> record.</span>
     </h1>
-    <p class="hero__sub reveal-up">20 years. NC License #87794. GAF-certified. A 5.0 rating with zero complaints — and a quote you can start right now, not next week.</p>
+    <p class="hero__sub reveal-up">Twenty years. NC License #87794. GAF-certified. A flawless 5.0 rating — and a founder who still walks every roof and answers the phone himself.</p>
     <div class="hero__cta reveal-up">
-      <a href="#quote" class="btn btn--solid magnetic" data-cursor="hover">Get my instant quote</a>
-      <a href="#work" class="btn btn--line magnetic" data-cursor="hover">See the work</a>
+      <a href="#book" class="btn btn--solid magnetic" data-cursor="hover">Request your free quote</a>
+      <a href="#founder" class="btn btn--line magnetic" data-cursor="hover">Meet the founder</a>
     </div>
   </div>
 
@@ -64,95 +68,24 @@
   </div>
 </section>
 
-<!-- ============ AI INSTANT QUOTE ============ -->
-<section class="quote section" id="quote">
-  <div class="section__head">
-    <span class="kicker">AI Instant Estimator</span>
-    <h2 class="reveal-line">Your ballpark roof price — in 60 seconds, no callback required.</h2>
-    <p class="lead reveal-up">Answer five quick questions. Our estimator runs the same math GAF-certified crews use, then locks your number while we confirm the details.</p>
-  </div>
-
-  <div class="estimator" id="estimator">
-    <div class="estimator__progress"><span id="estProgress"></span></div>
-
-    <!-- STEP 1 -->
-    <div class="step is-active" data-step="1">
-      <p class="step__q">What do you need?</p>
-      <div class="opts">
-        <button class="opt" data-key="project" data-val="Full replacement" data-cursor="hover">Roof replacement</button>
-        <button class="opt" data-key="project" data-val="Repair" data-cursor="hover">Roof repair</button>
-        <button class="opt" data-key="project" data-val="Storm damage" data-cursor="hover">Storm damage</button>
-        <button class="opt" data-key="project" data-val="New build" data-cursor="hover">New build</button>
-        <button class="opt" data-key="project" data-val="Inspection" data-cursor="hover">Free inspection</button>
-      </div>
+<!-- ============ FOUNDER ============ -->
+<section class="founder section" id="founder">
+  <div class="founder__grid">
+    <figure class="founder__photo reveal-up" data-cursor="hover">
+      <span class="founder__badge">Owner &amp; Founder</span>
+    </figure>
+    <div class="founder__copy">
+      <span class="kicker">Owner-led, never outsourced</span>
+      <h2 class="reveal-line">You'll deal with the owner — every single time.</h2>
+      <p class="lead reveal-up">Bryton Roofs was built by two life-long friends who still run it themselves. When you call, you don't get a call center or a commissioned salesman — you get the founder, who walks your roof, explains exactly what it needs, and stands behind every nail his crew drives.</p>
+      <ul class="founder__points">
+        <li class="reveal-up"><strong>He picks up the phone.</strong> No gatekeepers, no runaround — the man whose name is on the company.</li>
+        <li class="reveal-up"><strong>He inspects it himself.</strong> An honest assessment and a plain-English explanation before any work begins.</li>
+        <li class="reveal-up"><strong>He guarantees it in writing.</strong> A 10-year craftsmanship warranty, backed by 20 years and a 5.0 reputation with zero complaints.</li>
+      </ul>
+      <a href="#book" class="btn btn--solid magnetic reveal-up" data-cursor="hover">Talk to the owner</a>
+      <p class="founder__sig">— Will Strickland, Co-Owner &amp; Founder</p>
     </div>
-
-    <!-- STEP 2 -->
-    <div class="step" data-step="2">
-      <p class="step__q">What roof material?</p>
-      <div class="opts">
-        <button class="opt" data-key="material" data-val="Architectural shingle" data-mult="1" data-cursor="hover">Architectural shingle</button>
-        <button class="opt" data-key="material" data-val="Standing seam metal" data-mult="1.9" data-cursor="hover">Metal — standing seam</button>
-        <button class="opt" data-key="material" data-val="Corrugated metal" data-mult="1.5" data-cursor="hover">Metal — corrugated</button>
-        <button class="opt" data-key="material" data-val="Flat / commercial (TPO·EPDM·liquid)" data-mult="1.4" data-cursor="hover">Flat / commercial</button>
-        <button class="opt" data-key="material" data-val="Not sure" data-mult="1.1" data-cursor="hover">Not sure yet</button>
-      </div>
-    </div>
-
-    <!-- STEP 3 -->
-    <div class="step" data-step="3">
-      <p class="step__q">How big is the home?</p>
-      <div class="opts">
-        <button class="opt" data-key="size" data-val="Under 1,500 sq ft" data-base="9000" data-cursor="hover">Under 1,500 sq ft</button>
-        <button class="opt" data-key="size" data-val="1,500–2,500 sq ft" data-base="14000" data-cursor="hover">1,500–2,500 sq ft</button>
-        <button class="opt" data-key="size" data-val="2,500–4,000 sq ft" data-base="21000" data-cursor="hover">2,500–4,000 sq ft</button>
-        <button class="opt" data-key="size" data-val="4,000+ sq ft" data-base="30000" data-cursor="hover">4,000+ sq ft</button>
-      </div>
-    </div>
-
-    <!-- STEP 4 -->
-    <div class="step" data-step="4">
-      <p class="step__q">Roof complexity?</p>
-      <div class="opts">
-        <button class="opt" data-key="story" data-val="Single story, simple" data-cmult="1" data-cursor="hover">Single story, simple</button>
-        <button class="opt" data-key="story" data-val="Two story" data-cmult="1.15" data-cursor="hover">Two story</button>
-        <button class="opt" data-key="story" data-val="Steep & complex" data-cmult="1.3" data-cursor="hover">Steep &amp; complex</button>
-      </div>
-    </div>
-
-    <!-- STEP 5 -->
-    <div class="step" data-step="5">
-      <p class="step__q">How soon do you need it?</p>
-      <div class="opts">
-        <button class="opt" data-key="timeline" data-val="Emergency — leaking now" data-cursor="hover">Emergency — leaking now</button>
-        <button class="opt" data-key="timeline" data-val="Within 30 days" data-cursor="hover">Within 30 days</button>
-        <button class="opt" data-key="timeline" data-val="Just planning" data-cursor="hover">Just planning ahead</button>
-      </div>
-    </div>
-
-    <!-- RESULT -->
-    <div class="step step--result" data-step="6">
-      <div class="calc" id="calc"><span class="calc__ring"></span><p>Calculating your estimate…</p></div>
-      <div class="result" id="result" hidden>
-        <p class="result__label">Your estimated range</p>
-        <div class="result__range"><span id="estLow">$0</span><span class="dash">–</span><span id="estHigh">$0</span></div>
-        <p class="result__fin">or about <strong id="estMonthly">$0/mo</strong> with flexible financing</p>
-        <div class="result__storm" id="stormNote" hidden>
-          <strong>Storm or wind damage?</strong> We handle the insurance claim with you — most homeowners pay only their deductible. We'll document everything for your adjuster.
-        </div>
-        <form class="result__form" id="lockForm">
-          <p>Lock this quote &amp; book your free inspection:</p>
-          <div class="result__fields">
-            <input type="text" name="name" placeholder="Your name" required data-cursor="text" />
-            <input type="tel" name="phone" placeholder="Mobile number" required data-cursor="text" />
-          </div>
-          <button type="submit" class="btn btn--solid magnetic" data-cursor="hover">Lock my quote</button>
-        </form>
-        <p class="result__disclaimer">Ballpark only — your exact price comes after a free on-site inspection by a GAF-certified Bryton crew.</p>
-      </div>
-    </div>
-
-    <button class="estimator__back" id="estBack" hidden data-cursor="hover">← Back</button>
   </div>
 </section>
 
@@ -163,7 +96,6 @@
     <h2 class="reveal-line">Storm hit? We're already on it.</h2>
     <p class="lead reveal-up">An active leak or wind damage can't wait for business hours. Tap to call or text and we'll triage before more water gets in — then document everything for your insurance claim.</p>
     <div class="storm__cta reveal-up">
-      <!-- TODO: replace with verified GBP phone number (could not verify; site origin blocked) -->
       <a href="tel:+10000000000" class="btn btn--solid magnetic" data-cursor="hover">Call now</a>
       <a href="sms:+10000000000" class="btn btn--line magnetic" data-cursor="hover">Text a photo</a>
     </div>
@@ -252,7 +184,6 @@
       <blockquote class="rev"><p>"Excellent experience on our barrel-tile roof. Taylor Burns was helpful and professional the whole way through."</p><footer>Yelp review <span>★★★★★</span></footer></blockquote>
       <blockquote class="rev"><p>"Quality work and high standards. They're on speed dial for every project from here out."</p><footer>Facebook review <span>★★★★★</span></footer></blockquote>
       <blockquote class="rev"><p>"Fully licensed, fully insured, and they treated my home like their own. Couldn't ask for more."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
-      <!-- duplicate for seamless loop -->
       <blockquote class="rev"><p>"Will responded promptly and explained the problem before making any repairs. Efficient, professional — highly recommend."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
       <blockquote class="rev"><p>"Excellent experience on our barrel-tile roof. Taylor Burns was helpful and professional the whole way through."</p><footer>Yelp review <span>★★★★★</span></footer></blockquote>
       <blockquote class="rev"><p>"Quality work and high standards. They're on speed dial for every project from here out."</p><footer>Facebook review <span>★★★★★</span></footer></blockquote>
@@ -298,9 +229,9 @@
 <section class="book section" id="book">
   <div class="book__grid">
     <div class="book__copy">
-      <span class="kicker">Book it</span>
-      <h2 class="reveal-line">Pick a time. We'll bring the ladder.</h2>
-      <p class="lead reveal-up">Choose a slot for your free inspection — confirmed by text, no phone tag.</p>
+      <span class="kicker">Free, no-pressure quote</span>
+      <h2 class="reveal-line">Pick a time. The owner brings the ladder.</h2>
+      <p class="lead reveal-up">Request your free on-site inspection — we'll confirm by text, and the owner walks your roof personally. No pressure, no call center.</p>
     </div>
     <form class="booking reveal-up" id="booking">
       <div class="booking__dates" id="bookDates"></div>
@@ -332,7 +263,7 @@
 <div class="sticky" id="sticky">
   <a href="tel:+10000000000" class="sticky__btn" data-cursor="hover"><b>Call</b></a>
   <a href="sms:+10000000000" class="sticky__btn" data-cursor="hover"><b>Text</b></a>
-  <a href="#quote" class="sticky__btn sticky__btn--accent magnetic" data-cursor="hover"><b>Instant Quote</b></a>
+  <a href="#book" class="sticky__btn sticky__btn--accent magnetic" data-cursor="hover"><b>Free Quote</b></a>
 </div>
 
 <!-- libs (defer so a slow CDN never blocks render) -->
