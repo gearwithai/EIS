@@ -147,45 +147,6 @@
   };
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
-  /* ---------- BEFORE / AFTER SLIDERS (pointer + touch drag) ---------- */
-  document.querySelectorAll('.ba').forEach(ba => {
-    const range = ba.querySelector('.ba__range');
-    const before = ba.querySelector('.ba__before');
-    const handle = ba.querySelector('.ba__handle');
-    let dragging = false;
-    const setPct = (pct) => {
-      pct = Math.max(0, Math.min(100, pct));
-      before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
-      handle.style.left = pct + '%';
-      if (range) range.value = pct;
-    };
-    const fromEvent = (e) => {
-      const r = ba.getBoundingClientRect();
-      const cx = (e.touches && e.touches[0] ? e.touches[0].clientX : e.clientX);
-      setPct((cx - r.left) / r.width * 100);
-    };
-    ba.addEventListener('pointerdown', e => { dragging = true; try { ba.setPointerCapture(e.pointerId); } catch (x) {} fromEvent(e); });
-    ba.addEventListener('pointermove', e => { if (dragging) fromEvent(e); });
-    ba.addEventListener('pointerup', () => { dragging = false; });
-    ba.addEventListener('pointercancel', () => { dragging = false; });
-    if (range) range.addEventListener('input', () => setPct(+range.value));
-    setPct(50);
-  });
-
-  /* ---------- FINANCE SLIDER ---------- */
-  const finRange = document.getElementById('finRange');
-  if (finRange) {
-    const finProject = document.getElementById('finProject');
-    const finMonthly = document.getElementById('finMonthly');
-    const calcMonthly = p => Math.round(p * (0.0999 / 12) / (1 - Math.pow(1 + 0.0999 / 12, -84)));
-    finRange.addEventListener('input', () => {
-      const p = +finRange.value;
-      finProject.textContent = '$' + p.toLocaleString();
-      finMonthly.textContent = '$' + calcMonthly(p) + '/mo';
-    });
-    finRange.dispatchEvent(new Event('input'));
-  }
-
   /* ---------- BOOKING WIDGET ---------- */
   const datesWrap = document.getElementById('bookDates');
   if (datesWrap) {
