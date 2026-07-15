@@ -1,0 +1,34 @@
+[
+  {
+    "id": "daily-report",
+    "label": "Write my daily report",
+    "icon": "📋",
+    "description": "Summarize what you worked on today into a short, plain-language update.",
+    "prompt": "Look at what I worked on in this project today using git log and the current changes. Write a short daily standup update in plain language: what got done, what's in progress, and anything blocked. Keep it to a few bullet points a non-technical teammate could follow.",
+    "tools": false
+  },
+  {
+    "id": "review-changes",
+    "label": "Review my current changes",
+    "icon": "🔎",
+    "description": "Read the uncommitted changes and flag bugs or rough edges before you commit.",
+    "prompt": "Review my current uncommitted git changes for bugs, mistakes, and anything that looks unfinished. Give me a short prioritized list. Do not change any files.",
+    "tools": false
+  },
+  {
+    "id": "explain-project",
+    "label": "Explain this project to me",
+    "icon": "🧭",
+    "description": "A friendly overview of what this codebase is and how it fits together.",
+    "prompt": "Give me a friendly, plain-language overview of this project: what it does, the main pieces, and where I would start if I were new here. No jargon.",
+    "tools": false
+  },
+  {
+    "id": "commit-message",
+    "label": "Draft a commit message",
+    "icon": "✏️",
+    "description": "Turn the current changes into a clean, conventional commit message.",
+    "prompt": "Look at my staged and unstaged git changes and draft a clear, concise commit message (a short title plus a few bullet points). Just give me the message text — do not commit anything.",
+    "tools": false
+  }
+]

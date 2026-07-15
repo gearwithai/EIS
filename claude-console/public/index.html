@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Claude Console</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%E2%97%88%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">◈</span>
+        <span class="brand-name">Claude Console</span>
+      </div>
+      <button class="nav-item is-active" data-view="today">
+        <span class="nav-ico">📊</span> Today
+      </button>
+      <button class="nav-item" data-view="actions">
+        <span class="nav-ico">⚡</span> Actions
+      </button>
+      <button class="nav-item" data-view="sessions">
+        <span class="nav-ico">🗂️</span> Sessions
+      </button>
+      <div class="sidebar-foot">
+        <div class="foot-line" id="footCwd">—</div>
+        <div class="foot-sub">Everything here runs on your own machine.</div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- TODAY -->
+      <section class="view is-active" id="view-today">
+        <header class="view-head">
+          <div>
+            <h1>Daily report</h1>
+            <p class="sub" id="todayDate">—</p>
+          </div>
+          <button class="btn btn-primary" id="btnWriteReport">📋 Write today's summary</button>
+        </header>
+
+        <div class="stat-row" id="statRow"></div>
+
+        <div class="panel" id="reportPanel" hidden>
+          <div class="panel-head">
+            <h2>Today's written summary</h2>
+            <span class="run-status" id="reportStatus"></span>
+          </div>
+          <div class="run-output" id="reportOutput"></div>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <div class="panel-head"><h2>Activity — last 14 days</h2></div>
+            <div class="spark" id="spark"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h2>Most-used tools today</h2></div>
+            <div class="tool-bars" id="toolBars"></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h2>Sessions today</h2></div>
+          <div class="mini-list" id="todaySessions"></div>
+        </div>
+      </section>
+
+      <!-- ACTIONS -->
+      <section class="view" id="view-actions">
+        <header class="view-head">
+          <div>
+            <h1>Actions</h1>
+            <p class="sub">One click runs Claude Code for you. No terminal needed.</p>
+          </div>
+        </header>
+
+        <h2 class="group-title">Automations</h2>
+        <p class="group-hint">Ready-made routines. Click one, then press Run.</p>
+        <div class="card-grid" id="automationGrid"></div>
+
+        <h2 class="group-title">Skills</h2>
+        <p class="group-hint">Specialized abilities Claude Code can apply on demand.</p>
+        <div class="card-grid" id="skillGrid"></div>
+
+        <h2 class="group-title" id="cmdTitle" hidden>Slash commands</h2>
+        <div class="card-grid" id="commandGrid"></div>
+      </section>
+
+      <!-- SESSIONS -->
+      <section class="view" id="view-sessions">
+        <header class="view-head">
+          <div>
+            <h1>Session log</h1>
+            <p class="sub">Every Claude Code session on this machine.</p>
+          </div>
+          <input type="search" class="search" id="sessionSearch" placeholder="Search sessions…" />
+        </header>
+        <div class="session-table" id="sessionTable"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Run drawer -->
+  <div class="drawer-scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" hidden>
+    <div class="drawer-head">
+      <div>
+        <h2 id="drawerTitle">Run</h2>
+        <p class="sub" id="drawerSub"></p>
+      </div>
+      <button class="icon-btn" id="drawerClose" aria-label="Close">✕</button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+
+  <script src="/app.js"></script>
+</body>
+</html>
