@@ -1,232 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>document.documentElement.className='js';</script>
+<script>document.documentElement.className = document.documentElement.className.replace('no-js','') + ' js';</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bryton Roofs — Eastern NC's Only Perfect-Record Roofer</title>
-<meta name="description" content="20 years. GAF-certified. NC License #87794. A flawless 5.0 rating and the only instant roof quote in Eastern North Carolina — get your number in 60 seconds." />
+<title>GearWithAI — The AI Front Desk for Home-Service Contractors</title>
+<meta name="description" content="GearWithAI answers every call, text, and form the moment it comes in — qualifying customers, booking jobs, and following up automatically, 24/7. Built for roofing, HVAC, plumbing, electrical and other home-service contractors." />
+<meta name="theme-color" content="#0a0d0c" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="GearWithAI — Your AI Assistant Never Misses a Lead" />
+<meta property="og:description" content="An always-on AI system built for contractors. It captures leads, responds instantly 24/7, books appointments, and follows up automatically — so no opportunity slips through the cracks." />
+<meta property="og:site_name" content="GearWithAI" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
 <link rel="stylesheet" href="css/style.css" />
+
+<!-- SEO structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GearWithAI",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "AI customer experience and automation platform built for home-service and home-improvement contractors. Captures leads, responds instantly 24/7, books appointments, qualifies customers, and follows up automatically.",
+  "offers": { "@type": "Offer", "category": "Book A Demo" },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Home-service contractors: roofing, HVAC, plumbing, electrical, landscaping, painting, remodeling, solar, restoration, pest control, garage doors, general contracting"
+  }
+}
+</script>
 </head>
 <body>
 
-<!-- grain + custom cursor -->
+<a class="skip-link" href="#hero-heading">Skip to content</a>
 <div class="grain" aria-hidden="true"></div>
-<div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
 
-<!-- loader -->
-<div class="loader" id="loader">
-  <div class="loader__mark">BRYTON<span>ROOFS</span></div>
-  <div class="loader__bar"><span></span></div>
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader" role="status" aria-live="polite" aria-label="Loading GearWithAI">
+  <div class="loader__mark">GEAR<span>WITH</span>AI</div>
+  <div class="loader__bar"><span id="loaderBar"></span></div>
+  <p class="loader__note">Building your intelligent front desk…</p>
 </div>
+
+<!-- ============ PERSISTENT 3D CANVAS ============ -->
+<canvas id="webgl" aria-hidden="true"></canvas>
+<div class="canvas-fallback" id="canvasFallback" aria-hidden="true"></div>
+<div class="scene-vignette" aria-hidden="true"></div>
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
-  <a class="nav__brand" href="#top">BRYTON<span>ROOFS</span></a>
-  <nav class="nav__links">
-    <a href="#founder">The Founder</a>
-    <a href="#services">Services</a>
-    <a href="#reviews">Reviews</a>
+  <a class="nav__brand" href="#hero" aria-label="GearWithAI home">GEAR<span>WITH</span>AI</a>
+  <nav class="nav__links" id="navLinks" aria-label="Primary">
+    <a href="#hero">Home</a>
+    <a href="#how">How It Works</a>
+    <a href="#capabilities">Solutions</a>
+    <a href="#industries">Industries</a>
+    <a href="#about">About</a>
+    <a href="#demo" class="nav__demo-mobile">Book A Demo</a>
   </nav>
-  <a href="#book" class="btn btn--ghost magnetic" data-cursor="hover">Book inspection</a>
+  <a href="#demo" class="btn btn--demo magnetic" data-cursor="hover">Book A Demo</a>
+  <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+    <span></span><span></span>
+  </button>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="top">
-  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg" aria-hidden="true">
-    <source src="assets/hero.mp4" type="video/mp4" />
-  </video>
-  <div class="hero__bg" data-parallax="0.25"></div>
-  <div class="hero__roofline" data-parallax="0.5" aria-hidden="true"></div>
-  <div class="hero__grade" aria-hidden="true"></div>
+<main>
+
+<!-- ============ 01 · HERO ============ -->
+<section class="chapter hero" id="hero" data-scene="hero">
   <div class="hero__inner">
-    <p class="hero__eyebrow reveal-up">Greenville · Ayden · Raleigh · Durham · Goldsboro</p>
-    <h1 class="hero__title">
-      <span class="line">Eastern NC's only roofer</span>
-      <span class="line">with a <em>perfect</em> record.</span>
+    <p class="eyebrow reveal-up">AI Customer Experience Platform · Built for Contractors</p>
+    <h1 class="hero__title" id="hero-heading">
+      <span class="line">Your AI assistant</span>
+      <span class="line">never misses <em>a lead.</em></span>
     </h1>
-    <p class="hero__sub reveal-up">Twenty years. NC License #87794. GAF-certified. A flawless 5.0 rating — and a founder who still walks every roof and answers the phone himself.</p>
+    <p class="hero__sub reveal-up">GearWithAI answers every call, text, and form the second it arrives — qualifying customers, booking jobs, and following up on its own, 24/7. You stay on the roof; your front desk runs itself.</p>
     <div class="hero__cta reveal-up">
-      <a href="#book" class="btn btn--solid magnetic" data-cursor="hover">Request your free quote</a>
-      <a href="#founder" class="btn btn--line magnetic" data-cursor="hover">Meet the founder</a>
+      <a href="#demo" class="btn btn--solid magnetic" data-cursor="hover">Book A Demo</a>
+      <a href="#how" class="btn btn--line magnetic" data-cursor="hover">See How It Works</a>
     </div>
+    <p class="hero__trust reveal-up">No missed calls. No cold leads. No after-hours voicemail piling up.</p>
   </div>
+  <div class="hero__scrollcue" aria-hidden="true"><span></span>Scroll</div>
+</section>
 
-  <!-- trust ticker -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      <span>5.0 ★ Rating</span><span>•</span><span>Zero Complaints</span><span>•</span><span>GAF Certified</span><span>•</span><span>NC License #87794</span><span>•</span><span>10-Year Craftsmanship Warranty</span><span>•</span><span>20 Years in Eastern NC</span><span>•</span>
-      <span>5.0 ★ Rating</span><span>•</span><span>Zero Complaints</span><span>•</span><span>GAF Certified</span><span>•</span><span>NC License #87794</span><span>•</span><span>10-Year Craftsmanship Warranty</span><span>•</span><span>20 Years in Eastern NC</span><span>•</span>
+<!-- ============ 02 · THE MISSED OPPORTUNITY ============ -->
+<section class="chapter problem" id="problem" data-scene="problem" aria-labelledby="problem-heading">
+  <div class="wrap wrap--narrow">
+    <span class="kicker kicker--alert reveal-up">The problem</span>
+    <h2 class="reveal-line" id="problem-heading">Every missed call is a job going to your competitor.</h2>
+    <p class="lead reveal-up">You're on a job site with your hands full. The phone rings — a homeowner with a leaking roof, ready to hire today. It goes to voicemail. By the time you call back that evening, they've already booked the next name on the list. It happens more than you'd like to admit.</p>
+    <div class="stat-row">
+      <div class="stat reveal-up"><span class="stat__num" data-count="78" data-suffix="%">0</span><span class="stat__label">of customers hire the business that responds first.</span></div>
+      <div class="stat reveal-up"><span class="stat__num" data-count="5" data-prefix="&lt;" data-suffix=" min">0</span><span class="stat__label">is how fast a hot lead expects an answer.</span></div>
+      <div class="stat reveal-up"><span class="stat__num" data-count="1" data-suffix=" in 4">0</span><span class="stat__label">calls to home-service pros goes unanswered.</span></div>
+      <div class="stat reveal-up"><span class="stat__num" data-count="24" data-suffix="/7">0</span><span class="stat__label">is when leads arrive — long after you've clocked out.</span></div>
+    </div>
+    <p class="problem__closer reveal-up">Missed calls. Slow follow-up. Admin piling up after dark. Ad dollars spent to generate leads no one ever calls back. Every one of them is a job you paid for and lost.</p>
+  </div>
+</section>
+
+<!-- ============ 03 · GEARWITHAI ACTIVATES ============ -->
+<section class="chapter solution" id="solution" data-scene="solution" aria-labelledby="solution-heading">
+  <div class="wrap wrap--narrow">
+    <span class="kicker reveal-up">The solution</span>
+    <h2 class="reveal-line" id="solution-heading">GearWithAI picks up where your day leaves off.</h2>
+    <p class="lead reveal-up">The moment a call, text, or form comes in, GearWithAI is already answering. It captures the lead, understands what the customer needs, and keeps the conversation moving — even when you're forty feet up a ladder. Nothing slips through the cracks. Nothing waits until morning.</p>
+    <div class="ba">
+      <div class="ba__col ba__col--before reveal-up">
+        <span class="ba__tag">Before GearWithAI</span>
+        <ul>
+          <li>Leads sit in a voicemail you'll "get to later."</li>
+          <li>The fastest competitor books the job.</li>
+          <li>Follow-up depends on you finding a free minute.</li>
+        </ul>
+      </div>
+      <div class="ba__col ba__col--after reveal-up">
+        <span class="ba__tag">With GearWithAI</span>
+        <ul>
+          <li>Every lead is answered the second it arrives.</li>
+          <li>Customers get a reply before they call anyone else.</li>
+          <li>Qualifying, booking, and follow-up run automatically.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FOUNDER ============ -->
-<section class="founder section" id="founder">
-  <div class="founder__grid">
-    <figure class="founder__photo reveal-up" data-cursor="hover">
-      <span class="founder__badge">Owner &amp; Founder</span>
-    </figure>
-    <div class="founder__copy">
-      <span class="kicker">Owner-led, never outsourced</span>
-      <h2 class="reveal-line">You'll deal with the owner — every single time.</h2>
-      <p class="lead reveal-up">Bryton Roofs is run by its founder, Will Strickland — not a call center, not a commissioned salesman. When you call, you get Will: he walks your roof, explains exactly what it needs, and stands behind every nail his crew drives.</p>
-      <ul class="founder__points">
-        <li class="reveal-up"><strong>He picks up the phone.</strong> No gatekeepers, no runaround — the man whose name is on the company.</li>
-        <li class="reveal-up"><strong>He inspects it himself.</strong> An honest assessment and a plain-English explanation before any work begins.</li>
-        <li class="reveal-up"><strong>He guarantees it in writing.</strong> A 10-year craftsmanship warranty, backed by 20 years and a 5.0 reputation with zero complaints.</li>
+<!-- ============ 04 · CUSTOMER COMMUNICATION ============ -->
+<section class="chapter comms" id="comms" data-scene="comms" aria-labelledby="comms-heading">
+  <div class="wrap comms__grid">
+    <div class="comms__copy">
+      <span class="kicker reveal-up">Instant conversations</span>
+      <h2 class="reveal-line" id="comms-heading">It talks to your customers like your best employee would.</h2>
+      <p class="lead reveal-up">A homeowner texts about a roof leak at 9 p.m. GearWithAI replies in seconds — friendly, professional, and on-brand. It answers questions, gathers the details you need, and never leaves anyone waiting on hold. Every conversation sounds like your business, because it's trained on it.</p>
+      <ul class="ticklist reveal-up">
+        <li>Responds instantly by call, text, and web chat</li>
+        <li>Speaks your services, pricing basics, and service area</li>
+        <li>Captures the details that turn a chat into a job</li>
       </ul>
-      <a href="#book" class="btn btn--solid magnetic reveal-up" data-cursor="hover">Talk to the owner</a>
-      <p class="founder__sig">— Will Strickland, Founder &amp; Owner</p>
+    </div>
+    <div class="comms__chat reveal-up" aria-hidden="true">
+      <div class="chat" id="chatDemo">
+        <div class="chat__head"><span class="chat__dot"></span> Incoming · 9:04 PM</div>
+        <div class="chat__msg chat__msg--in" data-step="1"><p>Hi, I think my roof is leaking after that storm. Do you do emergency repairs?</p></div>
+        <div class="chat__msg chat__msg--out" data-step="2"><p>Hi! Yes — we handle storm and leak repairs. I can get you on the schedule. Is the leak active right now?</p></div>
+        <div class="chat__msg chat__msg--in" data-step="3"><p>Yeah, there's water coming into the upstairs bedroom.</p></div>
+        <div class="chat__msg chat__msg--out" data-step="4"><p>Understood — let's get you seen fast. What's the property address and a good number to confirm?</p></div>
+        <div class="chat__msg chat__msg--in" data-step="5"><p>412 Oak Street. 555-0119.</p></div>
+        <div class="chat__msg chat__msg--book" data-step="6"><p>You're booked — inspection tomorrow, 8:00 AM. Confirmation texted. ✓</p></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ STORM / 24-7 ============ -->
-<section class="storm section" id="storm">
-  <div class="storm__inner">
-    <div class="storm__live"><span class="dot"></span> Live now · answering 24/7</div>
-    <h2 class="reveal-line">Storm hit? We're already on it.</h2>
-    <p class="lead reveal-up">An active leak or wind damage can't wait for business hours. Tap to call or text and we'll triage before more water gets in — then document everything for your insurance claim.</p>
-    <div class="storm__cta reveal-up">
-      <!-- TODO: replace with verified GBP phone number (could not verify; site origin blocked) -->
-      <a href="tel:+10000000000" class="btn btn--solid magnetic" data-cursor="hover">Call now</a>
-      <a href="sms:+10000000000" class="btn btn--line magnetic" data-cursor="hover">Text a photo</a>
+<!-- ============ 05 · APPOINTMENT JOURNEY ============ -->
+<section class="chapter journey" id="journey" data-scene="journey" aria-labelledby="journey-heading">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="kicker reveal-up">Booked automatically</span>
+      <h2 class="reveal-line" id="journey-heading">From first message to booked job — without you lifting a finger.</h2>
+      <p class="lead reveal-up">Once a customer is qualified, GearWithAI checks your availability, offers real time slots, and locks in the appointment. It lands on your calendar with every detail attached. You show up to the estimate; the scheduling already handled itself.</p>
+    </div>
+    <ol class="journey__steps">
+      <li class="journey__step reveal-up"><span class="journey__no">01</span><h3>Inquiry lands</h3><p>A call, text, or form comes in — day or night.</p></li>
+      <li class="journey__step reveal-up"><span class="journey__no">02</span><h3>AI qualifies</h3><p>It confirms the job type, urgency, and service area.</p></li>
+      <li class="journey__step reveal-up"><span class="journey__no">03</span><h3>Slot offered</h3><p>Real openings from your calendar, offered instantly.</p></li>
+      <li class="journey__step reveal-up"><span class="journey__no">04</span><h3>Confirmed</h3><p>The customer picks a time and gets a text confirmation.</p></li>
+      <li class="journey__step reveal-up"><span class="journey__no">05</span><h3>On your calendar</h3><p>Booked with name, address, and job details attached.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 06 · INTELLIGENT FOLLOW-UP ============ -->
+<section class="chapter followup" id="followup" data-scene="followup" aria-labelledby="followup-heading">
+  <div class="wrap wrap--narrow">
+    <span class="kicker reveal-up">Automatic follow-up</span>
+    <h2 class="reveal-line" id="followup-heading">The leads you forgot about? It's already re-engaging them.</h2>
+    <p class="lead reveal-up">Most jobs are lost in the follow-up, not the first call. GearWithAI stays on it — checking back on quotes that went quiet, reviving old leads from months ago, and nudging customers until they book. Persistent, polite, and tireless. The follow-up you never have time for gets done anyway.</p>
+    <div class="timeline">
+      <div class="timeline__node reveal-up"><span class="timeline__when">Minute 1</span><p>Instant reply and first answer sent.</p></div>
+      <div class="timeline__node reveal-up"><span class="timeline__when">Hour 2</span><p>Gentle nudge if the quote hasn't been opened.</p></div>
+      <div class="timeline__node reveal-up"><span class="timeline__when">Day 3</span><p>Helpful check-in to keep the job moving.</p></div>
+      <div class="timeline__node reveal-up"><span class="timeline__when">Month 6</span><p>Old lead re-engaged with a timely reason to book.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ SERVICES ============ -->
-<section class="services section" id="services">
-  <div class="section__head">
-    <span class="kicker">What we do</span>
-    <h2 class="reveal-line">One crew. Every roof in Eastern NC.</h2>
-    <p class="lead reveal-up">Residential and commercial, repair to full replacement, shingle to standing seam — installed by a GAF-certified team that's done it for two decades.</p>
-  </div>
-  <div class="grid">
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">01</span><h3>Residential Roofing</h3><p>Architectural &amp; 3-tab shingle homes built to last through NC weather.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">02</span><h3>Commercial</h3><p>TPO, EPDM &amp; fluid-applied membranes for flat and low-slope buildings.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">03</span><h3>Repair &amp; Maintenance</h3><p>Leaks, missing shingles, flashing — fixed fast before they spread.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">04</span><h3>Full Replacement</h3><p>Complete tear-off and rebuild with a 10-year craftsmanship warranty.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">05</span><h3>Metal Roofing</h3><p>Standing seam &amp; corrugated — decades of life, modern looks.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">06</span><h3>Gutters</h3><p>Seamless gutters and guards that move water away from your home.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">07</span><h3>Inspections</h3><p>Free, no-pressure roof health checks — documented with photos.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">08</span><h3>Emergency &amp; Insurance Claims</h3><p>24/7 storm response and full claim support, start to finish.</p></article>
-  </div>
-</section>
-
-<!-- ============ REVIEWS ============ -->
-<section class="reviews section" id="reviews">
-  <div class="section__head">
-    <span class="kicker">Aggregated · Google + Yelp + Facebook</span>
-    <h2 class="reveal-line">5.0 stars. Zero complaints. Twenty years.</h2>
-    <div class="reviews__stats">
-      <div><span class="num" data-count="5.0" data-dec="1">0.0</span><small>★ average</small></div>
-      <div><span class="num" data-count="38">0</span><small>reviews</small></div>
-      <div><span class="num" data-count="0">0</span><small>complaints</small></div>
-      <div><span class="num" data-count="20">0</span><small>years</small></div>
+<!-- ============ 07 · AUTOMATION ECOSYSTEM (CAPABILITIES) ============ -->
+<section class="chapter capabilities" id="capabilities" data-scene="capabilities" aria-labelledby="cap-heading">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="kicker reveal-up">One connected system</span>
+      <h2 class="reveal-line" id="cap-heading">Your entire front office, running on autopilot.</h2>
+      <p class="lead reveal-up">Every part of customer communication, handled in one place and working together — so no lead, message, or opportunity ever falls through.</p>
     </div>
-  </div>
-  <div class="marquee" data-cursor="drag">
-    <div class="marquee__track">
-      <blockquote class="rev"><p>"Will responded promptly and explained the problem before making any repairs. Efficient, professional — highly recommend."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
-      <blockquote class="rev"><p>"Excellent experience on our barrel-tile roof. Taylor Burns was helpful and professional the whole way through."</p><footer>Yelp review <span>★★★★★</span></footer></blockquote>
-      <blockquote class="rev"><p>"Quality work and high standards. They're on speed dial for every project from here out."</p><footer>Facebook review <span>★★★★★</span></footer></blockquote>
-      <blockquote class="rev"><p>"Fully licensed, fully insured, and they treated my home like their own. Couldn't ask for more."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
-      <!-- duplicate for seamless loop -->
-      <blockquote class="rev"><p>"Will responded promptly and explained the problem before making any repairs. Efficient, professional — highly recommend."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
-      <blockquote class="rev"><p>"Excellent experience on our barrel-tile roof. Taylor Burns was helpful and professional the whole way through."</p><footer>Yelp review <span>★★★★★</span></footer></blockquote>
-      <blockquote class="rev"><p>"Quality work and high standards. They're on speed dial for every project from here out."</p><footer>Facebook review <span>★★★★★</span></footer></blockquote>
-      <blockquote class="rev"><p>"Fully licensed, fully insured, and they treated my home like their own. Couldn't ask for more."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
-    </div>
-  </div>
-  <p class="reviews__note">Review themes sourced from public Google, Yelp &amp; Facebook listings. Live site auto-syncs new reviews via API.</p>
-</section>
-
-<!-- ============ SERVICE AREA MAP ============ -->
-<section class="area section" id="area">
-  <div class="section__head">
-    <span class="kicker">Service area</span>
-    <h2 class="reveal-line">From Ayden to Raleigh — your county's covered.</h2>
-    <p class="lead reveal-up">Greenville, Ayden, Durham, Raleigh, Goldsboro and across Central &amp; Eastern North Carolina.</p>
-  </div>
-  <div class="map reveal-up">
-    <div class="map__field">
-      <span class="pin" style="--x:62%;--y:46%"><i></i>Greenville</span>
-      <span class="pin" style="--x:58%;--y:54%"><i></i>Ayden</span>
-      <span class="pin" style="--x:30%;--y:33%"><i></i>Durham</span>
-      <span class="pin" style="--x:36%;--y:40%"><i></i>Raleigh</span>
-      <span class="pin" style="--x:48%;--y:52%"><i></i>Goldsboro</span>
+    <div class="cap-grid">
+      <article class="cap reveal-up"><span class="cap__no">01</span><h3>Lead Capture</h3><p>Catch every call, text, form, and web chat the instant it comes in.</p></article>
+      <article class="cap reveal-up"><span class="cap__no">02</span><h3>Instant 24/7 Response</h3><p>Reply in seconds — day or night, weekends and holidays included.</p></article>
+      <article class="cap reveal-up"><span class="cap__no">03</span><h3>Appointment Booking</h3><p>Qualified customers land straight on your calendar, no phone tag.</p></article>
+      <article class="cap reveal-up"><span class="cap__no">04</span><h3>Lead Qualification</h3><p>Sort real jobs from tire-kickers before they ever reach you.</p></article>
+      <article class="cap reveal-up"><span class="cap__no">05</span><h3>Automated Follow-Up</h3><p>Quiet quotes and stalled leads get chased until they convert.</p></article>
+      <article class="cap reveal-up"><span class="cap__no">06</span><h3>Customer Support</h3><p>Answer common questions and keep customers informed, automatically.</p></article>
+      <article class="cap reveal-up"><span class="cap__no">07</span><h3>Lead Re-Engagement</h3><p>Wake up months of cold leads sitting in your database.</p></article>
+      <article class="cap reveal-up"><span class="cap__no">08</span><h3>Less Admin, More ROI</h3><p>Cut manual busywork and squeeze more jobs out of every ad dollar.</p></article>
     </div>
   </div>
 </section>
 
-<!-- ============ TRUST BAR ============ -->
-<section class="trust section">
-  <div class="trust__inner">
-    <h2 class="reveal-line trust__title">Backed in writing.</h2>
-    <ul class="trust__row">
-      <li class="reveal-up"><strong>NC License</strong><span>#87794</span></li>
-      <li class="reveal-up"><strong>GAF</strong><span>Certified Contractor</span></li>
-      <li class="reveal-up"><strong>10-Year</strong><span>Craftsmanship Warranty</span></li>
-      <li class="reveal-up"><strong>Fully</strong><span>Insured</span></li>
-      <li class="reveal-up"><strong>Insurance</strong><span>Claim Specialists</span></li>
+<!-- ============ 08 · INDUSTRIES ============ -->
+<section class="chapter industries" id="industries" data-scene="industries" aria-labelledby="ind-heading">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="kicker reveal-up">Built for the trades</span>
+      <h2 class="reveal-line" id="ind-heading">Made for the way home-service contractors actually work.</h2>
+      <p class="lead reveal-up">Whatever you install, repair, or maintain, GearWithAI speaks your customers' language and books your kind of jobs.</p>
+    </div>
+    <ul class="industries__marquee" id="indMarquee" aria-label="Industries served">
+      <li>Roofing</li><li>HVAC</li><li>Plumbing</li><li>Electrical</li><li>Landscaping</li><li>Painting</li>
+      <li>Remodeling</li><li>Solar</li><li>Restoration</li><li>Pest Control</li><li>Garage Doors</li><li>General Contracting</li>
     </ul>
+    <ul class="industries__marquee industries__marquee--rev" aria-hidden="true">
+      <li>Roofing</li><li>HVAC</li><li>Plumbing</li><li>Electrical</li><li>Landscaping</li><li>Painting</li>
+      <li>Remodeling</li><li>Solar</li><li>Restoration</li><li>Pest Control</li><li>Garage Doors</li><li>General Contracting</li>
+    </ul>
+    <p class="industries__note reveal-up">Roofing · HVAC · Plumbing · Electrical · Landscaping · Painting · Remodeling · Solar · Restoration · Pest Control · Garage Doors · General Contracting — and every local service business that lives and dies by fast response.</p>
   </div>
 </section>
 
-<!-- ============ BOOKING ============ -->
-<section class="book section" id="book">
-  <div class="book__grid">
-    <div class="book__copy">
-      <span class="kicker">Free, no-pressure quote</span>
-      <h2 class="reveal-line">Pick a time. The owner brings the ladder.</h2>
-      <p class="lead reveal-up">Request your free on-site inspection — we'll confirm by text, and the owner walks your roof personally. No pressure, no call center.</p>
+<!-- ============ 09 · HOW IT WORKS ============ -->
+<section class="chapter how" id="how" data-scene="how" aria-labelledby="how-heading">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="kicker reveal-up">How it works</span>
+      <h2 class="reveal-line" id="how-heading">Three steps to a front desk that never sleeps.</h2>
     </div>
-    <form class="booking reveal-up" id="booking">
-      <div class="booking__dates" id="bookDates"></div>
-      <div class="booking__times" id="bookTimes">
-        <button type="button" class="time" data-cursor="hover">8:00 AM</button>
-        <button type="button" class="time" data-cursor="hover">10:30 AM</button>
-        <button type="button" class="time" data-cursor="hover">1:00 PM</button>
-        <button type="button" class="time" data-cursor="hover">3:30 PM</button>
+    <div class="how-grid">
+      <article class="how-step reveal-up">
+        <span class="how-step__no">1</span>
+        <h3>Integration</h3>
+        <p>GearWithAI connects to the tools you already use — your phone, calendar, and CRM. No rip-and-replace, no learning curve for your crew.</p>
+      </article>
+      <article class="how-step reveal-up">
+        <span class="how-step__no">2</span>
+        <h3>Automation</h3>
+        <p>The AI takes the front lines: answering calls and texts, qualifying leads, booking jobs, and following up — around the clock.</p>
+      </article>
+      <article class="how-step reveal-up">
+        <span class="how-step__no">3</span>
+        <h3>Growth</h3>
+        <p>You focus on the work in front of you while your digital front desk keeps the pipeline full and the calendar booked.</p>
+      </article>
+    </div>
+
+    <div class="why" id="about" aria-labelledby="why-heading">
+      <h3 class="why__title reveal-line" id="why-heading">Why GearWithAI</h3>
+      <p class="why__lead reveal-up">Smart automation with measurable business impact — not another dashboard to babysit.</p>
+      <div class="why__grid">
+        <div class="why__item reveal-up"><strong>Faster</strong><span>response times, measured in seconds</span></div>
+        <div class="why__item reveal-up"><strong>More</strong><span>booked appointments on your calendar</span></div>
+        <div class="why__item reveal-up"><strong>Better</strong><span>ROI on every ad dollar you spend</span></div>
+        <div class="why__item reveal-up"><strong>Less</strong><span>manual admin and after-hours catch-up</span></div>
+        <div class="why__item reveal-up"><strong>Happier</strong><span>customers who always get an answer</span></div>
       </div>
-      <div class="booking__fields">
-        <input type="text" name="name" placeholder="Name" required data-cursor="text" />
-        <input type="tel" name="phone" placeholder="Mobile" required data-cursor="text" />
-        <input type="text" name="address" placeholder="Property address" data-cursor="text" />
-      </div>
-      <button type="submit" class="btn btn--solid magnetic" data-cursor="hover">Confirm my inspection</button>
-      <p class="booking__msg" id="bookMsg" hidden></p>
-    </form>
+    </div>
   </div>
 </section>
+
+<!-- ============ 10 · FINAL CONVERSION ============ -->
+<section class="chapter final" id="demo" data-scene="final" aria-labelledby="final-heading">
+  <div class="wrap wrap--narrow final__inner">
+    <span class="kicker reveal-up">The complete ecosystem</span>
+    <h2 class="reveal-line final__title" id="final-heading">Stop losing jobs to a missed call.</h2>
+    <p class="lead reveal-up">GearWithAI is the always-on system that answers, qualifies, books, and follows up — turning every opportunity into a booked job while you do the work you're great at. See exactly how it would run for your business.</p>
+    <div class="final__cta reveal-up">
+      <a href="#contact" class="btn btn--solid btn--lg magnetic" data-cursor="hover">Book A Demo</a>
+      <a href="#how" class="btn btn--line btn--lg magnetic" data-cursor="hover">See How It Works</a>
+    </div>
+    <p class="final__micro reveal-up">A short walkthrough. No obligation. See it answer, qualify, and book in real time.</p>
+  </div>
+</section>
+
+</main>
 
 <!-- ============ FOOTER ============ -->
-<footer class="foot">
-  <div class="foot__brand">BRYTON<span>ROOFS</span></div>
-  <p>Ayden, NC · Serving Central &amp; Eastern North Carolina · NC License #87794 · GAF Certified</p>
-  <p class="foot__small">Concept build by gearwithai.com — motion landing page demo. Phone, address &amp; hours to be confirmed with the client.</p>
+<footer class="foot" id="contact">
+  <div class="wrap foot__grid">
+    <div class="foot__brand-col">
+      <a class="foot__brand" href="#hero">GEAR<span>WITH</span>AI</a>
+      <p class="foot__tag">The AI customer experience platform for home-service contractors. Capture every lead, respond instantly, book more jobs — 24/7.</p>
+      <div class="foot__social">
+        <a href="#" aria-label="LinkedIn" data-cursor="hover">LinkedIn</a>
+        <a href="#" aria-label="Instagram" data-cursor="hover">Instagram</a>
+        <a href="#" aria-label="Facebook" data-cursor="hover">Facebook</a>
+        <a href="#" aria-label="YouTube" data-cursor="hover">YouTube</a>
+      </div>
+    </div>
+
+    <nav class="foot__links" aria-label="Footer">
+      <h4>Platform</h4>
+      <a href="#capabilities">Lead Capture</a>
+      <a href="#comms">Instant Response</a>
+      <a href="#journey">Appointment Booking</a>
+      <a href="#followup">Automated Follow-Up</a>
+      <a href="#how">How It Works</a>
+    </nav>
+
+    <form class="foot__form" id="demoForm" novalidate>
+      <h4>Book A Demo</h4>
+      <p class="foot__form-note">See GearWithAI answer, qualify, and book a job in real time. We'll reach out to set up your walkthrough.</p>
+      <div class="field">
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required data-cursor="text" />
+      </div>
+      <div class="field">
+        <label for="f-contact">Email or phone</label>
+        <input id="f-contact" name="contact" type="text" autocomplete="email" required data-cursor="text" />
+      </div>
+      <div class="field">
+        <label for="f-trade">Your trade</label>
+        <select id="f-trade" name="trade" data-cursor="hover">
+          <option value="">Select a trade</option>
+          <option>Roofing</option><option>HVAC</option><option>Plumbing</option><option>Electrical</option>
+          <option>Landscaping</option><option>Painting</option><option>Remodeling</option><option>Solar</option>
+          <option>Restoration</option><option>Pest Control</option><option>Garage Doors</option>
+          <option>General Contracting</option><option>Other home service</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn--solid magnetic" data-cursor="hover">Book A Demo</button>
+      <p class="foot__form-msg" id="formMsg" role="status" aria-live="polite" hidden></p>
+    </form>
+  </div>
+
+  <div class="wrap foot__bottom">
+    <p>© <span id="year">2026</span> GearWithAI. Always-on AI for home-service contractors.</p>
+    <p class="foot__legal"><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#demo">Book A Demo</a></p>
+  </div>
 </footer>
 
-<!-- ============ STICKY CONTACT BAR ============ -->
-<div class="sticky" id="sticky">
-  <a href="tel:+10000000000" class="sticky__btn" data-cursor="hover"><b>Call</b></a>
-  <a href="sms:+10000000000" class="sticky__btn" data-cursor="hover"><b>Text</b></a>
-  <a href="#book" class="sticky__btn sticky__btn--accent magnetic" data-cursor="hover"><b>Free Quote</b></a>
-</div>
+<!-- ============ SCRIPTS ============ -->
+<!-- Libraries are vendored locally (no runtime CDN dependency, no build step). -->
+<script src="js/vendor/gsap.min.js" defer></script>
+<script src="js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
 
-<!-- libs (defer so a slow CDN never blocks render) -->
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/split-type/0.3.4/index.umd.min.js"></script>
-<script defer src="js/main.js"></script>
+<!-- Three.js as an ES module via importmap (self-hosted) -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "./js/vendor/three.module.js"
+  }
+}
+</script>
+<script type="module" src="js/scene.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
