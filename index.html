@@ -1,232 +1,374 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-<script>document.documentElement.className='js';</script>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bryton Roofs — Eastern NC's Only Perfect-Record Roofer</title>
-<meta name="description" content="20 years. GAF-certified. NC License #87794. A flawless 5.0 rating and the only instant roof quote in Eastern North Carolina — get your number in 60 seconds." />
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-<link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GearWithAI — The 24/7 AI Assistant for Home Improvement Contractors</title>
+<meta name="description" content="GWAI is the always-on AI assistant for contractors — answering calls, booking appointments, and following up 24/7 so no customer slips through the cracks. Book a demo.">
+<link rel="canonical" href="https://gearwithai.com/">
+<meta name="theme-color" content="#0E300E">
+<meta name="color-scheme" content="dark">
+<meta name="author" content="GearWithAI">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GearWithAI">
+<meta property="og:title" content="GearWithAI — The 24/7 AI Assistant for Home Improvement Contractors">
+<meta property="og:description" content="GWAI is the always-on AI assistant for contractors — answering calls, booking appointments, and following up 24/7 so no customer slips through the cracks. Book a demo.">
+<meta property="og:url" content="https://gearwithai.com/">
+<meta property="og:image" content="https://gearwithai.com/assets/img/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GearWithAI — The 24/7 AI Assistant for Home Improvement Contractors">
+<meta name="twitter:description" content="GWAI is the always-on AI assistant for contractors — answering calls, booking appointments, and following up 24/7 so no customer slips through the cracks. Book a demo.">
+<meta name="twitter:image" content="https://gearwithai.com/assets/img/poster.jpg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-600-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/fraunces-600-latin.woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","LocalBusiness"],"@id":"https://gearwithai.com/#org","name":"GearWithAI","legalName":"NOVINDUS LLC SHIVANI NEEMKAR DBA GearWithAI","url":"https://gearwithai.com/","email":"sunny@gearwithai.com","telephone":"+1 910-665-7616","logo":"https://gearwithai.com/assets/img/favicon.svg","image":"https://gearwithai.com/assets/img/poster.jpg","description":"GWAI is the always-on AI customer experience platform for home improvement contractors \u2014 answering calls, booking appointments, and following up 24/7.","address":{"@type":"PostalAddress","streetAddress":"225 Matlage Way","addressLocality":"Sugar Land","addressRegion":"TX","postalCode":"77478","addressCountry":"US"},"sameAs":["https://www.linkedin.com/company/gearwithai","https://www.instagram.com/gearwithai","https://x.com/gearwithai","https://www.facebook.com/gearwithai"]},{"@type":"WebSite","@id":"https://gearwithai.com/#site","url":"https://gearwithai.com/","name":"GearWithAI","publisher":{"@id":"https://gearwithai.com/#org"}},{"@type":"SoftwareApplication","name":"GWAI","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@id":"https://gearwithai.com/#org"},"description":"AI phone assistant for home improvement contractors that answers calls, books appointments, and follows up automatically."}]}</script>
 </head>
-<body>
+<body class="home">
+<a class="skip-link" href="#main">Skip to content</a>
 
-<!-- grain + custom cursor -->
-<div class="grain" aria-hidden="true"></div>
-<div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
-
-<!-- loader -->
-<div class="loader" id="loader">
-  <div class="loader__mark">BRYTON<span>ROOFS</span></div>
-  <div class="loader__bar"><span></span></div>
+<div class="stage" aria-hidden="true">
+  <video class="stage__video" poster="assets/img/poster.jpg"
+         autoplay muted loop playsinline preload="auto" disablepictureinpicture
+         disableremoteplayback x-webkit-airplay="deny">
+    <source src="assets/video/cinematic.webm" type="video/webm">
+    <source src="assets/video/cinematic.mp4" type="video/mp4">
+  </video>
+  <div class="stage__overlay"></div>
+  <div class="stage__grain"></div>
+  <div class="stage__scrim"></div>
 </div>
 
-<!-- ============ NAV ============ -->
-<header class="nav" id="nav">
-  <a class="nav__brand" href="#top">BRYTON<span>ROOFS</span></a>
-  <nav class="nav__links">
-    <a href="#founder">The Founder</a>
-    <a href="#services">Services</a>
-    <a href="#reviews">Reviews</a>
-  </nav>
-  <a href="#book" class="btn btn--ghost magnetic" data-cursor="hover">Book inspection</a>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+<header class="nav" role="banner">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="GearWithAI — home"><span class="gmark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><defs><clipPath id="gwc1"><path d="M5 24 A19 19 0 0 1 43 24 Z"/></clipPath></defs><g class="gmark__spin"><g clip-path="url(#gwc1)" stroke="#A4863D" stroke-width="1.1" opacity="0.5"><line x1="5" y1="9" x2="43" y2="9"/><line x1="5" y1="13" x2="43" y2="13"/><line x1="5" y1="17" x2="43" y2="17"/><line x1="5" y1="21" x2="43" y2="21"/></g><path d="M5 24 A19 19 0 0 1 43 24" stroke="#A4863D" stroke-width="2" stroke-linecap="round"/></g><path class="gmark__arrow" d="M24 33 V18 M18 24 L24 17 L30 24" stroke="#E6E6FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Gear<span class="ai">With</span>AI</span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="about.html">About Us</a>
+      <a class="nav__link" href="services.html">Services</a>
+      <a class="nav__link" href="faqs.html">FAQs</a>
+      <a class="btn btn--primary nav__cta" href="contact.html">Book Demo</a>
+    </nav>
+    <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="top">
-  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg" aria-hidden="true">
-    <source src="assets/hero.mp4" type="video/mp4" />
-  </video>
-  <div class="hero__bg" data-parallax="0.25"></div>
-  <div class="hero__roofline" data-parallax="0.5" aria-hidden="true"></div>
-  <div class="hero__grade" aria-hidden="true"></div>
-  <div class="hero__inner">
-    <p class="hero__eyebrow reveal-up">Greenville · Ayden · Raleigh · Durham · Goldsboro</p>
-    <h1 class="hero__title">
-      <span class="line">Eastern NC's only roofer</span>
-      <span class="line">with a <em>perfect</em> record.</span>
-    </h1>
-    <p class="hero__sub reveal-up">Twenty years. NC License #87794. GAF-certified. A flawless 5.0 rating — and a founder who still walks every roof and answers the phone himself.</p>
-    <div class="hero__cta reveal-up">
-      <a href="#book" class="btn btn--solid magnetic" data-cursor="hover">Request your free quote</a>
-      <a href="#founder" class="btn btn--line magnetic" data-cursor="hover">Meet the founder</a>
-    </div>
-  </div>
+<main id="main" class="page">
 
-  <!-- trust ticker -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      <span>5.0 ★ Rating</span><span>•</span><span>Zero Complaints</span><span>•</span><span>GAF Certified</span><span>•</span><span>NC License #87794</span><span>•</span><span>10-Year Craftsmanship Warranty</span><span>•</span><span>20 Years in Eastern NC</span><span>•</span>
-      <span>5.0 ★ Rating</span><span>•</span><span>Zero Complaints</span><span>•</span><span>GAF Certified</span><span>•</span><span>NC License #87794</span><span>•</span><span>10-Year Craftsmanship Warranty</span><span>•</span><span>20 Years in Eastern NC</span><span>•</span>
-    </div>
+  <section class="hero hero--split">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" data-reveal="fade">The fastest-growing AI assistant</p>
+          <h1 data-split data-split-delay="0.15">The AI assistant for home improvement contractors.</h1>
+          <p class="lede" data-reveal="up" data-delay="0.2">GWAI is always on &mdash; answering calls, booking appointments, and following up so no customer slips through the cracks. Built specifically for roofers, painters, landscapers, HVAC companies, plumbers, electricians, restoration companies, and contractors.</p>
+          <div class="btn-row" data-reveal="up" data-delay="0.3">
+            <a class="btn btn--primary btn--lg" href="contact.html" data-magnetic>Book a demo <svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none"/></svg></a>
+            <a class="btn btn--ghost btn--lg" href="services.html">Explore GWAI</a>
+          </div>
+        </div>
+        <div class="hero__demo" data-reveal="scale" data-delay="0.2">
+          
+<div class="callcard glass" data-callcard aria-label="Live demo: GWAI answering a call">
+  <div class="callcard__top">
+    <span class="callcard__live"><span class="callcard__dot"></span>GWAI is answering live</span>
+    <span class="callcard__wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
   </div>
-</section>
-
-<!-- ============ FOUNDER ============ -->
-<section class="founder section" id="founder">
-  <div class="founder__grid">
-    <figure class="founder__photo reveal-up" data-cursor="hover">
-      <span class="founder__badge">Owner &amp; Founder</span>
-    </figure>
-    <div class="founder__copy">
-      <span class="kicker">Owner-led, never outsourced</span>
-      <h2 class="reveal-line">You'll deal with the owner — every single time.</h2>
-      <p class="lead reveal-up">Bryton Roofs is run by its founder, Will Strickland — not a call center, not a commissioned salesman. When you call, you get Will: he walks your roof, explains exactly what it needs, and stands behind every nail his crew drives.</p>
-      <ul class="founder__points">
-        <li class="reveal-up"><strong>He picks up the phone.</strong> No gatekeepers, no runaround — the man whose name is on the company.</li>
-        <li class="reveal-up"><strong>He inspects it himself.</strong> An honest assessment and a plain-English explanation before any work begins.</li>
-        <li class="reveal-up"><strong>He guarantees it in writing.</strong> A 10-year craftsmanship warranty, backed by 20 years and a 5.0 reputation with zero complaints.</li>
-      </ul>
-      <a href="#book" class="btn btn--solid magnetic reveal-up" data-cursor="hover">Talk to the owner</a>
-      <p class="founder__sig">— Will Strickland, Founder &amp; Owner</p>
-    </div>
+  <div class="callcard__caller">
+    <span class="callcard__avatar">MS</span>
+    <span class="callcard__who"><span class="callcard__label">Incoming call</span><span class="callcard__name">Marcus Sterling</span></span>
   </div>
-</section>
-
-<!-- ============ STORM / 24-7 ============ -->
-<section class="storm section" id="storm">
-  <div class="storm__inner">
-    <div class="storm__live"><span class="dot"></span> Live now · answering 24/7</div>
-    <h2 class="reveal-line">Storm hit? We're already on it.</h2>
-    <p class="lead reveal-up">An active leak or wind damage can't wait for business hours. Tap to call or text and we'll triage before more water gets in — then document everything for your insurance claim.</p>
-    <div class="storm__cta reveal-up">
-      <!-- TODO: replace with verified GBP phone number (could not verify; site origin blocked) -->
-      <a href="tel:+10000000000" class="btn btn--solid magnetic" data-cursor="hover">Call now</a>
-      <a href="sms:+10000000000" class="btn btn--line magnetic" data-cursor="hover">Text a photo</a>
-    </div>
+  <div class="callcard__chat">
+    <div class="bubble bubble--in" data-b="1">Can someone come for a roof leak?</div>
+    <div class="bubble bubble--ai" data-b="2"><span class="bubble__tag">GWAI</span>Absolutely. I can schedule one of our specialists for today at 4 PM.</div>
+    <div class="bubble bubble--in" data-b="3">Perfect.</div>
   </div>
-</section>
-
-<!-- ============ SERVICES ============ -->
-<section class="services section" id="services">
-  <div class="section__head">
-    <span class="kicker">What we do</span>
-    <h2 class="reveal-line">One crew. Every roof in Eastern NC.</h2>
-    <p class="lead reveal-up">Residential and commercial, repair to full replacement, shingle to standing seam — installed by a GAF-certified team that's done it for two decades.</p>
+  <div class="callcard__secured" data-b="4"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5" fill="none"/></svg><span><b>Lead secured.</b> Appointment automatically booked.</span></div>
+  <div class="callcard__stats">
+    <div><b>24/7</b><span>Always active</span></div>
+    <div><b>100%</b><span>Lead capture</span></div>
   </div>
-  <div class="grid">
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">01</span><h3>Residential Roofing</h3><p>Architectural &amp; 3-tab shingle homes built to last through NC weather.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">02</span><h3>Commercial</h3><p>TPO, EPDM &amp; fluid-applied membranes for flat and low-slope buildings.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">03</span><h3>Repair &amp; Maintenance</h3><p>Leaks, missing shingles, flashing — fixed fast before they spread.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">04</span><h3>Full Replacement</h3><p>Complete tear-off and rebuild with a 10-year craftsmanship warranty.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">05</span><h3>Metal Roofing</h3><p>Standing seam &amp; corrugated — decades of life, modern looks.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">06</span><h3>Gutters</h3><p>Seamless gutters and guards that move water away from your home.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">07</span><h3>Inspections</h3><p>Free, no-pressure roof health checks — documented with photos.</p></article>
-    <article class="card reveal-up" data-cursor="hover"><span class="card__no">08</span><h3>Emergency &amp; Insurance Claims</h3><p>24/7 storm response and full claim support, start to finish.</p></article>
-  </div>
-</section>
-
-<!-- ============ REVIEWS ============ -->
-<section class="reviews section" id="reviews">
-  <div class="section__head">
-    <span class="kicker">Aggregated · Google + Yelp + Facebook</span>
-    <h2 class="reveal-line">5.0 stars. Zero complaints. Twenty years.</h2>
-    <div class="reviews__stats">
-      <div><span class="num" data-count="5.0" data-dec="1">0.0</span><small>★ average</small></div>
-      <div><span class="num" data-count="38">0</span><small>reviews</small></div>
-      <div><span class="num" data-count="0">0</span><small>complaints</small></div>
-      <div><span class="num" data-count="20">0</span><small>years</small></div>
-    </div>
-  </div>
-  <div class="marquee" data-cursor="drag">
-    <div class="marquee__track">
-      <blockquote class="rev"><p>"Will responded promptly and explained the problem before making any repairs. Efficient, professional — highly recommend."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
-      <blockquote class="rev"><p>"Excellent experience on our barrel-tile roof. Taylor Burns was helpful and professional the whole way through."</p><footer>Yelp review <span>★★★★★</span></footer></blockquote>
-      <blockquote class="rev"><p>"Quality work and high standards. They're on speed dial for every project from here out."</p><footer>Facebook review <span>★★★★★</span></footer></blockquote>
-      <blockquote class="rev"><p>"Fully licensed, fully insured, and they treated my home like their own. Couldn't ask for more."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
-      <!-- duplicate for seamless loop -->
-      <blockquote class="rev"><p>"Will responded promptly and explained the problem before making any repairs. Efficient, professional — highly recommend."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
-      <blockquote class="rev"><p>"Excellent experience on our barrel-tile roof. Taylor Burns was helpful and professional the whole way through."</p><footer>Yelp review <span>★★★★★</span></footer></blockquote>
-      <blockquote class="rev"><p>"Quality work and high standards. They're on speed dial for every project from here out."</p><footer>Facebook review <span>★★★★★</span></footer></blockquote>
-      <blockquote class="rev"><p>"Fully licensed, fully insured, and they treated my home like their own. Couldn't ask for more."</p><footer>Google review <span>★★★★★</span></footer></blockquote>
-    </div>
-  </div>
-  <p class="reviews__note">Review themes sourced from public Google, Yelp &amp; Facebook listings. Live site auto-syncs new reviews via API.</p>
-</section>
-
-<!-- ============ SERVICE AREA MAP ============ -->
-<section class="area section" id="area">
-  <div class="section__head">
-    <span class="kicker">Service area</span>
-    <h2 class="reveal-line">From Ayden to Raleigh — your county's covered.</h2>
-    <p class="lead reveal-up">Greenville, Ayden, Durham, Raleigh, Goldsboro and across Central &amp; Eastern North Carolina.</p>
-  </div>
-  <div class="map reveal-up">
-    <div class="map__field">
-      <span class="pin" style="--x:62%;--y:46%"><i></i>Greenville</span>
-      <span class="pin" style="--x:58%;--y:54%"><i></i>Ayden</span>
-      <span class="pin" style="--x:30%;--y:33%"><i></i>Durham</span>
-      <span class="pin" style="--x:36%;--y:40%"><i></i>Raleigh</span>
-      <span class="pin" style="--x:48%;--y:52%"><i></i>Goldsboro</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TRUST BAR ============ -->
-<section class="trust section">
-  <div class="trust__inner">
-    <h2 class="reveal-line trust__title">Backed in writing.</h2>
-    <ul class="trust__row">
-      <li class="reveal-up"><strong>NC License</strong><span>#87794</span></li>
-      <li class="reveal-up"><strong>GAF</strong><span>Certified Contractor</span></li>
-      <li class="reveal-up"><strong>10-Year</strong><span>Craftsmanship Warranty</span></li>
-      <li class="reveal-up"><strong>Fully</strong><span>Insured</span></li>
-      <li class="reveal-up"><strong>Insurance</strong><span>Claim Specialists</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============ BOOKING ============ -->
-<section class="book section" id="book">
-  <div class="book__grid">
-    <div class="book__copy">
-      <span class="kicker">Free, no-pressure quote</span>
-      <h2 class="reveal-line">Pick a time. The owner brings the ladder.</h2>
-      <p class="lead reveal-up">Request your free on-site inspection — we'll confirm by text, and the owner walks your roof personally. No pressure, no call center.</p>
-    </div>
-    <form class="booking reveal-up" id="booking">
-      <div class="booking__dates" id="bookDates"></div>
-      <div class="booking__times" id="bookTimes">
-        <button type="button" class="time" data-cursor="hover">8:00 AM</button>
-        <button type="button" class="time" data-cursor="hover">10:30 AM</button>
-        <button type="button" class="time" data-cursor="hover">1:00 PM</button>
-        <button type="button" class="time" data-cursor="hover">3:30 PM</button>
-      </div>
-      <div class="booking__fields">
-        <input type="text" name="name" placeholder="Name" required data-cursor="text" />
-        <input type="tel" name="phone" placeholder="Mobile" required data-cursor="text" />
-        <input type="text" name="address" placeholder="Property address" data-cursor="text" />
-      </div>
-      <button type="submit" class="btn btn--solid magnetic" data-cursor="hover">Confirm my inspection</button>
-      <p class="booking__msg" id="bookMsg" hidden></p>
-    </form>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer class="foot">
-  <div class="foot__brand">BRYTON<span>ROOFS</span></div>
-  <p>Ayden, NC · Serving Central &amp; Eastern North Carolina · NC License #87794 · GAF Certified</p>
-  <p class="foot__small">Concept build by gearwithai.com — motion landing page demo. Phone, address &amp; hours to be confirmed with the client.</p>
-</footer>
-
-<!-- ============ STICKY CONTACT BAR ============ -->
-<div class="sticky" id="sticky">
-  <a href="tel:+10000000000" class="sticky__btn" data-cursor="hover"><b>Call</b></a>
-  <a href="sms:+10000000000" class="sticky__btn" data-cursor="hover"><b>Text</b></a>
-  <a href="#book" class="sticky__btn sticky__btn--accent magnetic" data-cursor="hover"><b>Free Quote</b></a>
 </div>
 
-<!-- libs (defer so a slow CDN never blocks render) -->
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/split-type/0.3.4/index.umd.min.js"></script>
-<script defer src="js/main.js"></script>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span class="scroll-cue__line"></span>Scroll</div>
+  </section>
+
+  <section class="section" aria-labelledby="manifesto">
+    <div class="container narrow center">
+      <p class="eyebrow center" data-reveal="fade">Never miss another job</p>
+      <h2 id="manifesto" class="display" data-reveal="up">While you're on the roof, <span class="serif-italic">GWAI answers the phone.</span></h2>
+      <p class="lede" data-reveal="up" style="margin-top:1.5rem">Every missed call is a job handed to a competitor. GWAI picks up on the first ring, books the appointment, and follows up automatically &mdash; day, night, weekends, and holidays. You keep working. GWAI keeps booking.</p>
+    </div>
+  </section>
+
+  <section class="section" id="services" aria-labelledby="svc-h">
+    <div class="container">
+      <div class="split" style="align-items:flex-end;margin-bottom:2.5rem">
+        <div>
+          <p class="eyebrow" data-reveal="fade">What GWAI does</p>
+          <h2 id="svc-h" data-reveal="up">One AI assistant. Every customer, handled.</h2>
+        </div>
+        <p class="lede" data-reveal="up">From the first ring to the booked appointment and the follow-up review, GWAI runs your front office so you can run the jobs.</p>
+      </div>
+      <div class="grid grid-3">
+        
+      <article class="card" data-reveal="up">
+        <div class="card__icon"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"/></svg></div>
+        <h3>AI Receptionist</h3>
+        <p>GWAI answers every call in your business's voice, 24/7, so you never lose another job to voicemail.</p>
+        <a class="link-arrow card__link" href="services.html">Learn more <svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none"/></svg></a>
+      </article>
+      <article class="card" data-reveal="up">
+        <div class="card__icon"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h18l-7 8v6l-4 2v-8z"/></svg></div>
+        <h3>Lead Follow-Up Automation</h3>
+        <p>Every lead is qualified, recorded, and followed up automatically until it becomes a booked job.</p>
+        <a class="link-arrow card__link" href="services.html">Learn more <svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none"/></svg></a>
+      </article>
+      <article class="card" data-reveal="up">
+        <div class="card__icon"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/><path d="M8 10h8M8 13.5h5" fill="none"/></svg></div>
+        <h3>Missed-Call Text-Back</h3>
+        <p>Every missed call triggers an instant, friendly text, so hot leads stay warm instead of calling a competitor.</p>
+        <a class="link-arrow card__link" href="services.html">Learn more <svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none"/></svg></a>
+      </article>
+      <article class="card" data-reveal="up">
+        <div class="card__icon"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12a8 8 0 0 1 13-6l3 2M20 12a8 8 0 0 1-13 6l-3-2" fill="none"/><path d="M20 3v3h-3M4 21v-3h3" fill="none"/></svg></div>
+        <h3>CRM Automation</h3>
+        <p>Contacts, appointments, and call notes flow into the tools you already use — with zero double entry.</p>
+        <a class="link-arrow card__link" href="services.html">Learn more <svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none"/></svg></a>
+      </article>
+      <article class="card" data-reveal="up">
+        <div class="card__icon"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/><path d="M8.5 14l2.2 2.2 4.3-4.3" fill="none"/></svg></div>
+        <h3>Appointment Booking</h3>
+        <p>GWAI books qualified appointments straight into your calendar while the customer is still on the line.</p>
+        <a class="link-arrow card__link" href="services.html">Learn more <svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none"/></svg></a>
+      </article>
+      <article class="card" data-reveal="up">
+        <div class="card__icon"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.5 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.4l6-.9z"/></svg></div>
+        <h3>Review Generation</h3>
+        <p>GWAI asks for reviews at the perfect moment and helps you build the 5-star reputation that wins the next job.</p>
+        <a class="link-arrow card__link" href="services.html">Learn more <svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none"/></svg></a>
+      </article>
+      </div>
+      <div class="center" style="margin-top:2.5rem" data-reveal="up">
+        <a class="btn btn--ghost" href="services.html">See everything GWAI does <svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="network" aria-labelledby="net-h">
+    <div class="container center" style="margin-bottom:1rem">
+      <p class="eyebrow center" data-reveal="fade">The Integrated Network</p>
+      <h2 id="net-h" data-reveal="up">One system. Every contractor.</h2>
+      <p class="lede" data-reveal="up" style="margin-inline:auto">Every business runs on the same intelligent core &mdash; GWAI answering, booking, and following up across the trades.</p>
+    </div>
+    <div class="container">
+      
+    <div class="net-constellation" data-reveal="fade" aria-hidden="true">
+      <svg viewBox="0 0 1000 480" preserveAspectRatio="xMidYMid meet" role="presentation">
+        <defs><linearGradient id="coreg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#cbb27a"/><stop offset="1" stop-color="#A4863D"/>
+        </linearGradient></defs>
+        <g class="net-lines"><line class="net-line" x1="500" y1="240" x2="500" y2="64" style="animation-delay:0.00s"/><line class="net-line" x1="500" y1="240" x2="783" y2="116" style="animation-delay:0.35s"/><line class="net-line" x1="500" y1="240" x2="900" y2="240" style="animation-delay:0.70s"/><line class="net-line" x1="500" y1="240" x2="783" y2="364" style="animation-delay:1.05s"/><line class="net-line" x1="500" y1="240" x2="500" y2="416" style="animation-delay:1.40s"/><line class="net-line" x1="500" y1="240" x2="217" y2="364" style="animation-delay:1.75s"/><line class="net-line" x1="500" y1="240" x2="100" y2="240" style="animation-delay:2.10s"/><line class="net-line" x1="500" y1="240" x2="217" y2="116" style="animation-delay:2.45s"/></g>
+        <g class="net-nodes"><g class="net-node" style="animation-delay:0.00s"><circle cx="500" cy="64" r="6.5"/><text x="500" y="42" text-anchor="middle">Roofing</text></g><g class="net-node" style="animation-delay:0.35s"><circle cx="783" cy="116" r="6.5"/><text x="783" y="94" text-anchor="middle">HVAC</text></g><g class="net-node" style="animation-delay:0.70s"><circle cx="900" cy="240" r="6.5"/><text x="900" y="218" text-anchor="middle">Electrical</text></g><g class="net-node" style="animation-delay:1.05s"><circle cx="783" cy="364" r="6.5"/><text x="783" y="398" text-anchor="middle">Plumbing</text></g><g class="net-node" style="animation-delay:1.40s"><circle cx="500" cy="416" r="6.5"/><text x="500" y="450" text-anchor="middle">Painting</text></g><g class="net-node" style="animation-delay:1.75s"><circle cx="217" cy="364" r="6.5"/><text x="217" y="398" text-anchor="middle">Restoration</text></g><g class="net-node" style="animation-delay:2.10s"><circle cx="100" cy="240" r="6.5"/><text x="100" y="218" text-anchor="middle">Solar</text></g><g class="net-node" style="animation-delay:2.45s"><circle cx="217" cy="116" r="6.5"/><text x="217" y="94" text-anchor="middle">Landscaping</text></g></g>
+        <g class="net-core">
+          <circle class="net-core__ring" cx="500" cy="240" r="72"/>
+          <circle class="net-core__ring net-core__ring--2" cx="500" cy="240" r="72"/>
+          <circle class="net-core__disc" cx="500" cy="240" r="52"/>
+          <text class="net-core__label" x="500" y="247" text-anchor="middle">GWAI</text>
+        </g>
+      </svg>
+    </div>
+    </div>
+    <div data-reveal="fade" style="margin-top:2rem">
+      <div class="net-marquee"><div class="net-marquee__track"><span class="net-chip"><span class="net-chip__ai">AI</span>Apex Home Solutions</span><span class="net-chip"><span class="net-chip__ai">AI</span>SkyShield Roofing</span><span class="net-chip"><span class="net-chip__ai">AI</span>SunGrid Energy</span><span class="net-chip"><span class="net-chip__ai">AI</span>AquaPure Systems</span><span class="net-chip"><span class="net-chip__ai">AI</span>PrimeFix Contractors</span><span class="net-chip"><span class="net-chip__ai">AI</span>IronPeak Roofing</span><span class="net-chip"><span class="net-chip__ai">AI</span>BrightVolt Solar</span><span class="net-chip"><span class="net-chip__ai">AI</span>ClearFlow Water Tech</span><span class="net-chip"><span class="net-chip__ai">AI</span>BlueHammer Services</span><span class="net-chip"><span class="net-chip__ai">AI</span>StormGuard Roof Co.</span><span class="net-chip"><span class="net-chip__ai">AI</span>HelioCore Power</span><span class="net-chip"><span class="net-chip__ai">AI</span>HydroShield Solutions</span><span class="net-chip"><span class="net-chip__ai">AI</span>EverBuild Pros</span><span class="net-chip"><span class="net-chip__ai">AI</span>TitanTop Roofing</span><span class="net-chip"><span class="net-chip__ai">AI</span>SkyCharge Solar</span><span class="net-chip"><span class="net-chip__ai">AI</span>PureDrop Water Co.</span><span class="net-chip"><span class="net-chip__ai">AI</span>SolidNest Improvements</span><span class="net-chip"><span class="net-chip__ai">AI</span>Apex Ridge Roofing</span><span class="net-chip"><span class="net-chip__ai">AI</span>NovaSun Systems</span><span class="net-chip"><span class="net-chip__ai">AI</span>FreshSpring Filtration</span><span class="net-chip"><span class="net-chip__ai">AI</span>TrueCraft Home Services</span><span class="net-chip"><span class="net-chip__ai">AI</span>BlueSky Roofers</span><span class="net-chip"><span class="net-chip__ai">AI</span>PureRay Energy</span><span class="net-chip"><span class="net-chip__ai">AI</span>BlueWave Water Systems</span><span class="net-chip"><span class="net-chip__ai">AI</span>Apex Home Solutions</span><span class="net-chip"><span class="net-chip__ai">AI</span>SkyShield Roofing</span><span class="net-chip"><span class="net-chip__ai">AI</span>SunGrid Energy</span><span class="net-chip"><span class="net-chip__ai">AI</span>AquaPure Systems</span><span class="net-chip"><span class="net-chip__ai">AI</span>PrimeFix Contractors</span><span class="net-chip"><span class="net-chip__ai">AI</span>IronPeak Roofing</span><span class="net-chip"><span class="net-chip__ai">AI</span>BrightVolt Solar</span><span class="net-chip"><span class="net-chip__ai">AI</span>ClearFlow Water Tech</span><span class="net-chip"><span class="net-chip__ai">AI</span>BlueHammer Services</span><span class="net-chip"><span class="net-chip__ai">AI</span>StormGuard Roof Co.</span><span class="net-chip"><span class="net-chip__ai">AI</span>HelioCore Power</span><span class="net-chip"><span class="net-chip__ai">AI</span>HydroShield Solutions</span><span class="net-chip"><span class="net-chip__ai">AI</span>EverBuild Pros</span><span class="net-chip"><span class="net-chip__ai">AI</span>TitanTop Roofing</span><span class="net-chip"><span class="net-chip__ai">AI</span>SkyCharge Solar</span><span class="net-chip"><span class="net-chip__ai">AI</span>PureDrop Water Co.</span><span class="net-chip"><span class="net-chip__ai">AI</span>SolidNest Improvements</span><span class="net-chip"><span class="net-chip__ai">AI</span>Apex Ridge Roofing</span><span class="net-chip"><span class="net-chip__ai">AI</span>NovaSun Systems</span><span class="net-chip"><span class="net-chip__ai">AI</span>FreshSpring Filtration</span><span class="net-chip"><span class="net-chip__ai">AI</span>TrueCraft Home Services</span><span class="net-chip"><span class="net-chip__ai">AI</span>BlueSky Roofers</span><span class="net-chip"><span class="net-chip__ai">AI</span>PureRay Energy</span><span class="net-chip"><span class="net-chip__ai">AI</span>BlueWave Water Systems</span></div></div>
+      <div class="net-marquee"><div class="net-marquee__track net-marquee__track--rev"><span class="net-chip"><span class="net-chip__ai">AI</span>Cornerstone Renovations</span><span class="net-chip"><span class="net-chip__ai">AI</span>RoofMaster Pro</span><span class="net-chip"><span class="net-chip__ai">AI</span>SolarNest Solutions</span><span class="net-chip"><span class="net-chip__ai">AI</span>CrystalTap Solutions</span><span class="net-chip"><span class="net-chip__ai">AI</span>BuildRight Experts</span><span class="net-chip"><span class="net-chip__ai">AI</span>StrongHold Roofing</span><span class="net-chip"><span class="net-chip__ai">AI</span>Daylight Power Co.</span><span class="net-chip"><span class="net-chip__ai">AI</span>CleanStream Water</span><span class="net-chip"><span class="net-chip__ai">AI</span>UrbanShield Contractors</span><span class="net-chip"><span class="net-chip__ai">AI</span>SummitRoof Solutions</span><span class="net-chip"><span class="net-chip__ai">AI</span>VoltSun Renewables</span><span class="net-chip"><span class="net-chip__ai">AI</span>AquaNest Services</span><span class="net-chip"><span class="net-chip__ai">AI</span>HomePro Works</span><span class="net-chip"><span class="net-chip__ai">AI</span>WeatherLock Roofing</span><span class="net-chip"><span class="net-chip__ai">AI</span>Horizon Solar Tech</span><span class="net-chip"><span class="net-chip__ai">AI</span>PrimeWater Solutions</span><span class="net-chip"><span class="net-chip__ai">AI</span>GreenLawn Care</span><span class="net-chip"><span class="net-chip__ai">AI</span>Precision Landscaping</span><span class="net-chip"><span class="net-chip__ai">AI</span>Elite Paving</span><span class="net-chip"><span class="net-chip__ai">AI</span>Solid Foundations</span><span class="net-chip"><span class="net-chip__ai">AI</span>Premier Electric</span><span class="net-chip"><span class="net-chip__ai">AI</span>TrustFlow Plumbing</span><span class="net-chip"><span class="net-chip__ai">AI</span>BrightSide Windows</span><span class="net-chip"><span class="net-chip__ai">AI</span>MasterCraft Cabinets</span><span class="net-chip"><span class="net-chip__ai">AI</span>Cornerstone Renovations</span><span class="net-chip"><span class="net-chip__ai">AI</span>RoofMaster Pro</span><span class="net-chip"><span class="net-chip__ai">AI</span>SolarNest Solutions</span><span class="net-chip"><span class="net-chip__ai">AI</span>CrystalTap Solutions</span><span class="net-chip"><span class="net-chip__ai">AI</span>BuildRight Experts</span><span class="net-chip"><span class="net-chip__ai">AI</span>StrongHold Roofing</span><span class="net-chip"><span class="net-chip__ai">AI</span>Daylight Power Co.</span><span class="net-chip"><span class="net-chip__ai">AI</span>CleanStream Water</span><span class="net-chip"><span class="net-chip__ai">AI</span>UrbanShield Contractors</span><span class="net-chip"><span class="net-chip__ai">AI</span>SummitRoof Solutions</span><span class="net-chip"><span class="net-chip__ai">AI</span>VoltSun Renewables</span><span class="net-chip"><span class="net-chip__ai">AI</span>AquaNest Services</span><span class="net-chip"><span class="net-chip__ai">AI</span>HomePro Works</span><span class="net-chip"><span class="net-chip__ai">AI</span>WeatherLock Roofing</span><span class="net-chip"><span class="net-chip__ai">AI</span>Horizon Solar Tech</span><span class="net-chip"><span class="net-chip__ai">AI</span>PrimeWater Solutions</span><span class="net-chip"><span class="net-chip__ai">AI</span>GreenLawn Care</span><span class="net-chip"><span class="net-chip__ai">AI</span>Precision Landscaping</span><span class="net-chip"><span class="net-chip__ai">AI</span>Elite Paving</span><span class="net-chip"><span class="net-chip__ai">AI</span>Solid Foundations</span><span class="net-chip"><span class="net-chip__ai">AI</span>Premier Electric</span><span class="net-chip"><span class="net-chip__ai">AI</span>TrustFlow Plumbing</span><span class="net-chip"><span class="net-chip__ai">AI</span>BrightSide Windows</span><span class="net-chip"><span class="net-chip__ai">AI</span>MasterCraft Cabinets</span></div></div>
+    </div>
+    <div class="container center" style="margin-top:2rem">
+      <p class="net-tag" data-reveal="fade">Roofing &bull; HVAC &bull; Electrical &bull; Plumbing &bull; Landscaping &bull; Painting &bull; Restoration &bull; Solar &bull; Water Systems &bull; General Contractors</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="results-h">
+    <div class="container">
+      <div class="panel" data-reveal="up">
+        <div class="center" style="max-width:680px;margin-inline:auto;margin-bottom:2.5rem">
+          <p class="eyebrow center">By the numbers</p>
+          <h2 id="results-h">More leads answered. More jobs booked. Automatically.</h2>
+          <p class="lede" style="margin-inline:auto">GWAI turns every lead into a booked job &mdash; without lifting a finger.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="stat__num"><span class="unit">$</span><span data-count="85">85</span><span class="unit">K+</span></div><div class="stat__label">Service revenue captured</div></div>
+          <div class="stat"><div class="stat__num"><span data-count="10">10</span><span class="unit">X</span></div><div class="stat__label">Return on investment</div></div>
+          <div class="stat"><div class="stat__num"><span data-count="50">50</span><span class="unit">+</span></div><div class="stat__label">Hours saved on calls</div></div>
+          <div class="stat"><div class="stat__num"><span data-count="75">75</span><span class="unit">+</span></div><div class="stat__label">Integrated partners</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="process" aria-labelledby="proc-h">
+    <div class="container">
+      <div class="center" style="max-width:640px;margin-inline:auto;margin-bottom:3rem">
+        <p class="eyebrow center" data-reveal="fade">How it works</p>
+        <h2 id="proc-h" data-reveal="up">Up and running in days, not months.</h2>
+        <p class="lede" data-reveal="up" style="margin-inline:auto">GWAI learns your business, then goes to work &mdash; instantly.</p>
+      </div>
+      <div class="steps">
+        <div class="step-card" data-reveal="up"><div class="step-card__n">01</div><h3>Discover</h3><p>We learn your services, service area, pricing, and how you like to talk to customers.</p></div>
+        <div class="step-card" data-reveal="up" data-delay="0.05"><div class="step-card__n">02</div><h3>Train</h3><p>We tune GWAI to answer in your voice and connect it to your calendar and CRM.</p></div>
+        <div class="step-card" data-reveal="up" data-delay="0.1"><div class="step-card__n">03</div><h3>Activate</h3><p>GWAI goes live, answering calls, texts, and web chats 24/7 from day one.</p></div>
+        <div class="step-card" data-reveal="up" data-delay="0.15"><div class="step-card__n">04</div><h3>Grow</h3><p>Every conversation is captured and every lead followed up &mdash; so revenue compounds.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="why-h">
+    <div class="container">
+      <div class="panel" data-reveal="up">
+        <div class="split">
+          <div>
+            <p class="eyebrow">Why contractors choose GWAI</p>
+            <h2 id="why-h">Built for the trades, not for tech companies.</h2>
+            <p class="lede">GWAI understands roofing emergencies, seasonal rushes, and the difference between a tire-kicker and a booked job. It's the receptionist, dispatcher, and follow-up team you've always needed &mdash; without the payroll.</p>
+            <ul class="check-list"><li><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5" fill="none"/></svg><span>Capture more leads from the traffic you already have</span></li><li><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5" fill="none"/></svg><span>Book more appointments, straight into your calendar</span></li><li><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5" fill="none"/></svg><span>Reduce missed calls with instant text-back</span></li><li><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5" fill="none"/></svg><span>Improve customer communication across every channel</span></li><li><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5" fill="none"/></svg><span>Generate more 5-star reviews, automatically</span></li><li><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5" fill="none"/></svg><span>Automate the repetitive work that eats your day</span></li><li><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5" fill="none"/></svg><span>Grow your business with AI working around the clock</span></li></ul>
+          </div>
+          <div class="stack">
+            <div class="stat"><div class="stat__num">24/7</div><div class="stat__label">Answers every call, day or night, weekends and holidays.</div></div>
+            <div class="stat"><div class="stat__num">Instant</div><div class="stat__label">Books appointments and texts back missed calls in seconds.</div></div>
+            <div class="stat"><div class="stat__num">Yours</div><div class="stat__label">Speaks in your business's voice, trained on your services.</div></div>
+            <div class="stat"><div class="stat__num">Connected</div><div class="stat__label">Syncs with 75+ tools you already run your business on.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Our belief">
+    <div class="container narrow center">
+      <div style="color:var(--gold);margin-inline:auto;width:44px;height:44px" data-reveal="up"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7h4v4c0 2.5-1.5 4.2-4 5v-2c1.2-.5 2-1.4 2-2.5H7zM15 7h4v4c0 2.5-1.5 4.2-4 5v-2c1.2-.5 2-1.4 2-2.5h-2z"/></svg></div>
+      <blockquote class="display" style="font-size:var(--step-3);margin-top:1.5rem" data-reveal="up">The contractors who win the next decade won't be the biggest. They'll be the ones who <span class="serif-italic">never miss a call.</span></blockquote>
+      <p class="text-mut" style="margin-top:1.5rem" data-reveal="fade">&mdash; The GearWithAI philosophy</p>
+    </div>
+  </section>
+
+  
+  <section class="section cta-band">
+    <div class="container">
+      <div class="panel" data-reveal="up">
+        <p class="eyebrow center" data-reveal="fade">Let's build</p>
+        <h2 data-reveal="up">Ready to see GWAI in action?</h2>
+        <p class="lede" data-reveal="up">Book a demo today and see why hundreds of contractors trust GWAI to capture more revenue, day and night.</p>
+        <div class="btn-row" data-reveal="up" style="margin-top:2rem">
+          <a class="btn btn--gold btn--lg" href="contact.html" data-magnetic>Book a demo</a>
+          
+        </div>
+        <p class="cta-note" data-reveal="fade">Global coverage &bull; Instant activation</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="brand" href="index.html" aria-label="GearWithAI — home"><span class="gmark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><defs><clipPath id="gwc2"><path d="M5 24 A19 19 0 0 1 43 24 Z"/></clipPath></defs><g class="gmark__spin"><g clip-path="url(#gwc2)" stroke="#A4863D" stroke-width="1.1" opacity="0.5"><line x1="5" y1="9" x2="43" y2="9"/><line x1="5" y1="13" x2="43" y2="13"/><line x1="5" y1="17" x2="43" y2="17"/><line x1="5" y1="21" x2="43" y2="21"/></g><path d="M5 24 A19 19 0 0 1 43 24" stroke="#A4863D" stroke-width="2" stroke-linecap="round"/></g><path class="gmark__arrow" d="M24 33 V18 M18 24 L24 17 L30 24" stroke="#E6E6FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Gear<span class="ai">With</span>AI</span></a>
+        <p class="footer__tag">The AI Customer Experience Platform for home improvement contractors. Automating growth and reclaiming your time through intelligent conversation.</p>
+        <a class="btn btn--ghost" href="mailto:sunny@gearwithai.com?subject=GearWithAI%20media%20kit%20request" style="margin-top:1.5rem"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12M7 11l5 4 5-4M5 20h14" fill="none"/></svg> Download assets</a>
+        <div class="socials" style="margin-top:1.5rem">
+          <a class="social" href="https://www.linkedin.com/company/gearwithai" target="_blank" rel="noopener" aria-label="GearWithAI on LinkedIn"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 10v7" fill="none"/></svg></a>
+          <a class="social" href="https://www.instagram.com/gearwithai" target="_blank" rel="noopener" aria-label="GearWithAI on Instagram"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+          <a class="social" href="https://x.com/gearwithai" target="_blank" rel="noopener" aria-label="GearWithAI on X"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20" fill="none"/></svg></a>
+          <a class="social" href="https://www.facebook.com/gearwithai" target="_blank" rel="noopener" aria-label="GearWithAI on Facebook"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 8h2V5h-2a3 3 0 0 0-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V8.5c0-.4.3-.5.6-.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Direct lines</h4>
+        <ul>
+          <li><a href="tel:+19106657616">+1 910-665-7616</a></li>
+          <li><a href="mailto:sunny@gearwithai.com">sunny@gearwithai.com</a></li>
+          <li><a class="link-arrow" href="contact.html" style="color:var(--gold)">Book a demo <svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none"/></svg></a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Headquarters</h4>
+        <address class="footer__address">
+          NOVINDUS LLC SHIVANI NEEMKAR DBA GearWithAI<br>
+          225 Matlage Way<br>
+          Sugar Land, TX 77478
+        </address>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span data-year>2026</span> GearWithAI. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div class="gearbot" data-gearbot>
+  <div class="gearbot__panel" id="gearbot-panel" role="dialog" aria-label="Chat with GearBot" aria-modal="false" hidden>
+    <div class="gearbot__head">
+      <span class="gearbot__id">
+        <span class="gearbot__avatar"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/><circle cx="12" cy="12" r="2.5"/></svg></span>
+        <span class="gearbot__meta">
+          <span class="gearbot__name">GearBot</span>
+          <span class="gearbot__status"><i></i> Online &middot; replies instantly</span>
+        </span>
+      </span>
+      <button class="gearbot__close" type="button" aria-label="Close chat"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20" fill="none"/></svg></button>
+    </div>
+    <div class="gearbot__body" id="gearbot-log" role="log" aria-live="polite">
+      <div class="gearbot__msg gearbot__msg--bot">Hi, I'm GearBot &mdash; the AI assistant from GearWithAI. I can explain how GWAI answers calls, books jobs, and follows up 24/7. What would you like to know?</div>
+      <div class="gearbot__chips" data-gearbot-chips>
+        <button type="button" class="gearbot__chip">How does GWAI work?</button>
+        <button type="button" class="gearbot__chip">What does it cost?</button>
+        <button type="button" class="gearbot__chip">Book a demo</button>
+      </div>
+    </div>
+    <form class="gearbot__input" data-gearbot-form>
+      <input type="text" name="q" placeholder="Ask GearBot anything&hellip;" aria-label="Message GearBot" autocomplete="off">
+      <button type="submit" aria-label="Send message"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none"/></svg></button>
+    </form>
+  </div>
+  <button class="gearbot__launch" type="button" aria-expanded="false" aria-controls="gearbot-panel" aria-label="Open GearBot chat">
+    <span class="gearbot__launch-open"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/><circle cx="9" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="15" cy="12" r="1"/></svg></span>
+    <span class="gearbot__launch-close"><svg class="" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20" fill="none"/></svg></span>
+  </button>
+  <span class="gearbot__label">GearBot</span>
+</div>
+
+<script defer src="assets/js/gsap.min.js"></script>
+<script defer src="assets/js/ScrollTrigger.min.js"></script>
+<script defer src="assets/js/SplitText.min.js"></script>
+<script defer src="assets/js/lenis.min.js"></script>
+<script defer src="js/app.js"></script>
 </body>
 </html>
